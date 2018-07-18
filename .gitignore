@@ -1,0 +1,10 @@
+node_modules
+.idea
+.temp
+.sass-cache
+coverage
+dist
+*.swp
+*.swo
+*.log
+*.DS_Store
