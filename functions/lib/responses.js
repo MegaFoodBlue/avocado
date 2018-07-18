@@ -591,5 +591,168 @@ const kidsHealthRich = {
        }
 };
 
+const prenatalPostnatalRich ={
+       "conversationToken": "[\"actions_capability_screen_output\"]",
+       "finalResponse": {
+              "richResponse": {
+                     "items": [
+                            {
+                                   "simpleResponse": {
+                                          "textToSpeech": "New moms and moms-to-be, you’ve got specific nutritional needs. Our line of prenatal and postnatal supplements are designed to support a healthy pregnancy and breastfeeding."
+                                   }
+                            },
+                            {
+                                   "carouselBrowse": {
+                                          "items": [
+                                                 {
+                                                        "title": "Baby & Me™",
+                                                        "description": "Mamas-to-be (and lactating mamas), we’ve got you and your bump covered! MegaFood® Baby & Me™ is our original pre- and post-natal supplement, created with pregnancy-specific FoodState Nutrients™ like vitamins B6, D and folic acid, to support the health of moms like you and your developing children*. We also included a Nourishing Food and Herb Blend. Best of all? Baby & Me can be taken any time of the day, even on an empty stomach.",
+                                                        "footer": "Supports the health of mother and developing child",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwcd40f62a/WOMENS/W1004/10121/10121.png?sw=1000",
+                                                               "accessibilityText": "Baby & Me™"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/postnatal-prenatal-vitamins/baby-me-W1004.html?cgid=postnatal-prenatal-vitamins"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Baby & Me 2™",
+                                                        "description": "You’ve got a lot to think about during your pregnancy. Your nutrition? Let us help with that! MegaFood® Baby & Me 2™ combines optimal levels of iron, methylated folate and B12, B6, vitamin D and choline for healthy mood balance for moms-to-be*, and is formulated by award-winning integrative medical physician, Tieraona Low Dog, M.D. (We made it without calcium or magnesium, so if those are areas of concern for you, we suggest also trying MegaFood®Bone Health.)",
+                                                        "footer": "Supports the health of mother and developing child",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwbcfb0a7d/WOMENS/W1005/10314/10314.png?sw=1000",
+                                                               "accessibilityText": "Baby & Me 2™"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/postnatal-prenatal-vitamins/baby-me-2-W1005.html?cgid=postnatal-prenatal-vitamins"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "MegaFlora® for Baby & Me",
+                                                        "description": "Improved health for you and for baby*! Probiotics are a top recommended supplement for expectant moms! MegaFlora® for Baby & Me™ contains a broad spectrum of our proprietary blend of 14 unique strains of 20 billion probiotics, FoodState® Ginger to soothe upset tummies and support healthy digestive function*, and prebiotics, to promote the health and wellbeing of pregnant and breastfeeding women*. Probiotics support nutrient absorption, and studies have shown that intake of Lactobacillus rhamnosus (HN001) during the last trimester and early breastfeeding supports the child’s developing immune system.* All MegaFlora products are tested to be free of gluten, dairy and soy. We recommend storing your MegaFlora in the fridge or freezer, and taking it once daily with a meal.",
+                                                        "footer": "Supports the immune health of a pregnant mother and developing baby",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw8587c362/PROBIOTICS/W1036/10027/10027.png?sw=1000",
+                                                               "accessibilityText": "MegaFlora® for Baby & Me"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/postnatal-prenatal-vitamins/megaflora-for-baby-me-W1036.html?cgid=postnatal-prenatal-vitamins"
+                                                        }
+                                                 }
+                                          ]
+                                   }
+                            }
+                     ]
+              }
+       }
+};
+
+
+const sportRich = {
+       "conversationToken": "[\"actions_capability_screen_output\"]",
+       "finalResponse": {
+              "richResponse": {
+                     "items": [
+                            {
+                                   "simpleResponse": {
+                                          "textToSpeech": "If you’re regularly active, or a seasoned athlete, you’ll want to supplement to replenish essential vitamins and minerals lost during exertion. Many MegaFood® supplements can be taken on an empty stomach, and are easy to digest."
+                                   }
+                            },
+                            {
+                                   "carouselBrowse": {
+                                          "items": [
+                                                 {
+                                                        "title": "Daily Turmeric Nutrient Booster Powder™",
+                                                        "description": "Work out—and bounce back!—with MegaFood® Daily Turmeric Booster Powder™. It combines a protective, restorative combination of whole foods, herbs and extracts, including FoodState® Vitamin C and three powerful blends: our Whole Body Recovery Blend (replenishing turmeric, holy basil and BioPerine® black pepper extract), Harvest Fruit Blend (health-promoting tart cherry, black raspberry, wild blueberry, and cranberry extracts), and Fruit Phenolic Blend (organic whole orange from Uncle Matt’s Organic, plus blueberry and cranberry for an array of antioxidants)*. Mix with your favorite juice or smoothie, sip, and enjoy!",
+                                                        "footer": "Designed to help you bounce back from your daily workout",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwb984168e/BOOSTER/W1019/W1019.png?sw=1000",
+                                                               "accessibilityText": "Daily Turmeric Nutrient Booster Powder™"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/sport-supplements/daily-turmeric-nutrient-booster-powder-W1019.html?cgid=sport-supplements"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Turmeric Strength™ for Whole Body",
+                                                        "description": "Where do we start? MegaFood® Turmeric Strength™ for Whole Body combines a powerful array of healthful compounds, whole foods and extracts that support a healthy inflammation response*, and features real, farm fresh turmeric root from Kauai Organic Farms and pure turmeric extract to deliver 481 mg of curcumin per serving*. We also added BioPerine®, a patented black pepper extract that helps support the absorption of curcumin (that otherwise on its own can be hard for the body to assimilate), while cherries and berries provide added antioxidants",
+                                                        "footer": "Delivers whole food and concentrated herbal antioxidant compounds known to support an already healthy inflammation response",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw548feab9/INFLAMMATION/W1058/10006/10006.png?sw=1000",
+                                                               "accessibilityText": "Turmeric Strength™ for Whole Body"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/sport-supplements/turmeric-strength-for-whole-body-W1058.html?cgid=sport-supplements"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Gummy B12 Energy - Ginger",
+                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds*—no artificial or added colors, flavors or preservatives, period. These Ginger B12 gummies deliver a unique and yummy ginger root zing from Kauai Organic Farms. Not too spicy—just right! Plus, B12 helps support cellular energy levels and production",
+                                                        "footer": "Supports cellular energy production",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw63341d5c/VITAMIN_B/W1023/10346/10346.png?sw=1000",
+                                                               "accessibilityText": "Gummy B12 Energy - Ginger"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/sport-supplements/gummy-b12-energy---ginger-W1023.html?cgid=sport-supplements"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Turmeric Strength™ for Liver",
+                                                        "description": "Go ahead, show your liver some love! MegaFood® Turmeric Strength™ for Liver combines a powerful array of healthful compounds, whole foods and extracts that support an already healthy inflammation response of the liver*, and features real, farm fresh turmeric root from Kauai Organic Farms to deliver 300 mg of curcumin per serving*. We also added BioPerine®, a patented black pepper extract that helps support the absorption of curcumin (that otherwise on its own can be hard for the body to assimilate)*, and milk thistle seed, rich in silymarin and shown to promote liver health*, while schisandra berry provides added antioxidants",
+                                                        "footer": "Delivers whole food and concentrated herbal antioxidant compounds known to support an already healthy inflammation response",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw4006f980/INFLAMMATION/W1057/10306/10306.png?sw=1000",
+                                                               "accessibilityText": "Turmeric Strength™ for Liver"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/sport-supplements/turmeric-strength-for-liver-W1057.html?cgid=sport-supplements"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Daily Energy Nutrient Booster Powder™",
+                                                        "description": "We designed MegaFood® Daily Energy Nutrient Booster Powder™ to help sustain physical and mental stamina*. It combines FoodState® B12, essential for healthy red blood cell formation, with chromium, which supports a healthy metabolism*, along with a powerful blend of herbs and roots—ashwagandha, eleuthero, beet root, and green tea leaf extract—for added phytochemicals and support during times of stress*. Mix with your favorite juice or smoothie, sip, and enjoy!",
+                                                        "footer": "Designed to help sustain the body and mind",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw0935e9da/BOOSTER/W1015/60136/60136.png?sw=1000",
+                                                               "accessibilityText": "Daily Energy Nutrient Booster Powder™"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/sport-supplements/daily-energy-nutrient-booster-powder-W1015.html?cgid=sport-supplements"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Ultra C-400 mg",
+                                                        "description": "Give us a ‘C’! Our Ultra-C 400 provides FoodState® Vitamin C delivered with real, hand-picked organic oranges from Uncle Matt’s Organic for ultimate immune support*. You’ll also find our Nourishing Food and Herb Blend for an added spectrum of antioxidants",
+                                                        "footer": "Promotes immune & cellular health",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwa7e65a8f/VITAMIN_C/W1059/10184/10184.png?sw=1000",
+                                                               "accessibilityText": "Ultra C-400 mg"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/sport-supplements/ultra-c-400-mg-W1059.html?cgid=sport-supplements"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Gummy B12 Energy - Cranberry",
+                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds*—no artificial or added colors, flavors or preservatives, period—plus they’re easy to chew and swallow. 24 mcg of B12 help support cellular energy levels and production; tart, farm-fresh cranberry from James Lake Farms in Three Lakes, Wisconsin give our gummies real berry flavor (and color!)",
+                                                        "footer": "Supports cellular energy production",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwf50fa9a6/VITAMIN_B/W1024/10347/10347.png?sw=1000",
+                                                               "accessibilityText": "Gummy B12 Energy - Cranberry"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/gummies/gummy-b12-energy-cranberry-W1024.html?cgid=sport-supplements"
+                                                        }
+                                                 }
+                                          ]
+                                   }
+                            }
+                     ]
+              }
+       }
+};
+
 
 
