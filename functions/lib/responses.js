@@ -166,7 +166,7 @@ const beautyAndSkinRich = {
                      "items": [
                             {
                                    "simpleResponse": {
-                                          "textToSpeech": "Fresh from farm to tablet, I recommend you take a look at Skin, Nails and Hair product from Megafood."
+                                          "textToSpeech": "Fresh from farm to tablet, take a look at Skin, Nails and Hair product from Megafood."
                                    }
                             },
                             {
