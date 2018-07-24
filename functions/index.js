@@ -21,7 +21,6 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
 
 
-
        // See https://github.com/dialogflow/dialogflow-fulfillment-nodejs/tree/master/samples/actions-on-google
        // for a complete Dialogflow fulfillment library Actions on Google client library v2 integration sample
 
@@ -29,7 +28,10 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
 
        let intentMap = new Map();
+
+       intentMap.set('beauty-skin', require('./intent-handlers/beauty-skin'));
        intentMap.set('energy', require('./intent-handlers/energy'));
        intentMap.set('default-supplements', require('./intent-handlers/default-supplements'));
+
        agent.handleRequest(intentMap);
 });
