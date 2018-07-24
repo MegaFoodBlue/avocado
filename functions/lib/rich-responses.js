@@ -205,144 +205,129 @@ const beautyAndSkinRich = {
 };
 
 const energyRich = {
-       "conversationToken": "[\"actions_capability_screen_output\"]",
-              "finalResponse": {
-              "richResponse": {
                      "items": [
+
                             {
-                                   "simpleResponse": {
-                                          "textToSpeech": "Megafood's energy-focused supplements are a perfect fit. You can achieve physical and metal wellness with these supplements."
+                                   "title": "Blood Builder®",
+                                   "description": "MegaFood® Blood Builder® is one of our top-selling products for a reason: it’s clinically proven to increase iron levels and reduce fatigue without common gastrointestinal side effects such as nausea or constipation (there, we said it!)†. We make it with nourishing, whole foods, like beets from Stahlbush® Island Farms and organic oranges from Uncle Matt’s Organic, plus folic acid and B12 for healthy red blood cell production, and vitamin C to support iron absorption. Oh, and did we tell you it’s safe to take on an empty stomach? If building your blood without missing a beet (see what we did there?) sounds up your alley, this is the product for you*.",
+                                   "footer": "Clinically proven to increase iron levels",
+                                   "image": {
+                                          "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw4e51bdae/MINERALS/W1008/10170/10170.png?sw=1000",
+                                          "accessibilityText": "Blood Builder"
+                                   },
+                                   "openUrlAction": {
+                                          "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/blood-builder-W1008.html?cgid=energy-supplements"
                                    }
                             },
                             {
-                                   "carouselBrowse": {
-                                          "items": [
-                                                 {
-                                                        "title": "Blood Builder®",
-                                                        "description": "MegaFood® Blood Builder® is one of our top-selling products for a reason: it’s clinically proven to increase iron levels and reduce fatigue without common gastrointestinal side effects such as nausea or constipation (there, we said it!)†. We make it with nourishing, whole foods, like beets from Stahlbush® Island Farms and organic oranges from Uncle Matt’s Organic, plus folic acid and B12 for healthy red blood cell production, and vitamin C to support iron absorption. Oh, and did we tell you it’s safe to take on an empty stomach? If building your blood without missing a beet (see what we did there?) sounds up your alley, this is the product for you*.",
-                                                        "footer": "Clinically proven to increase iron levels",
-                                                        "image": {
-                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw4e51bdae/MINERALS/W1008/10170/10170.png?sw=1000",
-                                                               "accessibilityText": "Blood Builder"
-                                                        },
-                                                        "openUrlAction": {
-                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/blood-builder-W1008.html?cgid=energy-supplements"
-                                                        }
-                                                 },
-                                                 {
-                                                        "title": "Daily Energy Nutrient Booster Powder™",
-                                                        "description": "We designed MegaFood® Daily Energy Nutrient Booster Powder™ to help sustain physical and mental stamina*. It combines FoodState® B12, essential for healthy red blood cell formation, with chromium, which supports a healthy metabolism*, along with a powerful blend of herbs and roots—ashwagandha, eleuthero, beet root, and green tea leaf extract—for added phytochemicals and support during times of stress*. Mix with your favorite juice or smoothie, sip, and enjoy!",
-                                                        "footer": "Designed to help sustain the body and mind",
-                                                        "image": {
-                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw0935e9da/BOOSTER/W1015/60136/60136.png?sw=1000",
-                                                               "accessibilityText": "Daily Energy"
-                                                        },
-                                                        "openUrlAction": {
-                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/daily-energy-nutrient-booster-powder-W1015.html?cgid=energy-supplements"
-                                                        }
-                                                 },
-                                                 {
-                                                        "title": "Blood Builder® Minis",
-                                                        "description": "MegaFood® Blood Builder® Minis takes everything you love about our original Blood Builder and delivers it to you in a convenient, twice-daily tablet. It’s clinically proven to increase iron levels and reduce fatigue without common gastrointestinal side effects such as nausea or constipation (there, we said it!)†. We make it with nourishing whole foods, like beets from Stahlbush® Island Farms and organic oranges from Uncle Matt’s Organic, plus folic acid, and B12 for healthy red blood cell production, and vitamin C to support iron absorption. Oh, and did we tell you it’s safe to take on an empty stomach? If building your blood without missing a beet (see what we did there?) sounds up your alley, this is the product for you*.",
-                                                        "footer": "Clinically proven to increase iron levels",
-                                                        "image": {
-                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw40af8513/MINERALS/W1009/10337/10337.png?sw=1000",
-                                                               "accessibilityText": "Blood Builder Minis"
-                                                        },
-                                                        "openUrlAction": {
-                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/blood-builder-minis-W1009.html?cgid=energy-supplements"
-                                                        }
-                                                 },
-                                                 {
-                                                        "title": "Vegan B12",
-                                                        "description": "Plant-based? We’ve got your back! Support healthy blood cell formation (and optimized performance, since healthy blood delivers optimal oxygen, and oxygen = life!) with MegaFood® Vegan B12*. We included synergistic vitamins B6 and folic acid to help support your natural physical and mental energy*. This convenient mini-tablet is easy to swallow, and can be taken any time of the day.",
-                                                        "footer": "Supports healthy energy levels",
-                                                        "image": {
-                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw993a94e1/VITAMIN_B/W1061/12001/12001.png?sw=1000",
-                                                               "accessibilityText": "Vegan B12"
-                                                        },
-                                                        "openUrlAction": {
-                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/vegan-b12-W1061.html?cgid=energy-supplements"
-                                                        }
-                                                 },
-                                                 {
-                                                        "title": "Adrenal Strength®",
-                                                        "description": "Got stress? (Who doesn’t?!) MegaFood® Adrenal Strength® nourishes adrenal glands depleted by everyday physical, mental and and emotional stress with the help of Sensoril®, a clinically-studied extract derived from ashwagandha root shown to promote feelings of wellbeing and balance* (say ‘Ahh’), plus organic whole orange from Uncle Matt’s Organic, brown rice from Lundberg Family Farms and FoodState® Magnesium. Show fatigue and tension the door—and say hello to restored adrenal function*.",
-                                                        "footer": "Promotes healthy stress response and wards off fatigue",
-                                                        "image": {
-                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw6cb54bee/MOOD/W1001/20021/20021.png?sw=1000",
-                                                               "accessibilityText": "Adrenal Strength"
-                                                        },
-                                                        "openUrlAction": {
-                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/adrenal-strength-W1001.html?cgid=energy-supplements"
-                                                        }
-                                                 },
-                                                 {
-                                                        "title": "Gummy B12 Energy - Ginger",
-                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds*—no artificial or added colors, flavors or preservatives, period. These Ginger B12 gummies deliver a unique and yummy ginger root zing from Kauai Organic Farms. Not too spicy—just right! Plus, B12 helps support cellular energy levels and production*.",
-                                                        "footer": "Supports cellular energy production",
-                                                        "image": {
-                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw63341d5c/VITAMIN_B/W1023/10346/10346.png?sw=1000",
-                                                               "accessibilityText": "Gummy B12 Energy - Ginger"
-                                                        },
-                                                        "openUrlAction": {
-                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/gummy-b12-energy---ginger-W1023.html?cgid=energy-supplements"
-                                                        }
-                                                 },
-                                                 {
-                                                        "title": "Gummy B12 Energy - Cranberry",
-                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds*—no artificial or added colors, flavors or preservatives, period—plus they’re easy to chew and swallow. 24 mcg of B12 help support cellular energy levels and production; tart, farm-fresh cranberry from James Lake Farms in Three Lakes, Wisconsin give our gummies real berry flavor (and color!).",
-                                                        "footer": "Supports cellular energy production",
-                                                        "image": {
-                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwf50fa9a6/VITAMIN_B/W1024/10347/10347.png?sw=1000",
-                                                               "accessibilityText": "Gummy B12 Energy - Cranberry"
-                                                        },
-                                                        "openUrlAction": {
-                                                               "url": "https://www.megafood.com/gummies/gummy-b12-energy-cranberry-W1024.html?cgid=energy-supplements"
-                                                        }
-                                                 },
-                                                 {
-                                                        "title": "Balanced B Complex",
-                                                        "description": "Want more pep in your step? MegaFood® Balanced B Complex supports your nervous system and assists in the conversion of food into energy with its balanced ratio of FoodState® B complex vitamins and nourishing whole foods from our family farm partners, like organic kale from Foxy Organic and brown rice from Lundberg Family Farms*. It can be taken anytime throughout the day, even on an empty stomach.",
-                                                        "footer": "Promotes healthy energy levels",
-                                                        "image": {
-                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwb2b1fabe/VITAMIN_B/W1006/10167/10167.png?sw=1000",
-                                                               "accessibilityText": "Balanced B Complex"
-                                                        },
-                                                        "openUrlAction": {
-                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/balanced-b-complex-W1006.html?cgid=energy-supplements"
-                                                        }
-                                                 },
-                                                 {
-                                                        "title": "Thyroid Strength®",
-                                                        "description": "A healthy thyroid means healthy metabolism—and a healthy mood, mental focus and cardiovascular system*! MegaFood® Thyroid Strength® combines thyroid-supporting FoodState® minerals with L-tyrosine, Sensoril® ashwagandha and other herbal extracts to support thyroid health*.",
-                                                        "footer": "Supports thyroid health and metabolic activity",
-                                                        "image": {
-                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dweee385f2/MOOD/W1055/20027/20027.png?sw=1000",
-                                                               "accessibilityText": "Thyroid Strength"
-                                                        },
-                                                        "openUrlAction": {
-                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/thyroid-strength-W1055.html?cgid=energy-supplements"
-                                                        }
-                                                 },
-                                                 {
-                                                        "title": "Methyl B12",
-                                                        "description": "MegaFood® Methyl B12 supports heart and blood health through methylated (active) forms of folate, B12 and B6, and helps to maintain healthy levels of homocysteine, an amino acid found in the blood*. These vitamins are delivered with nourishing, whole foods from Lundberg Family Farms and Stahlbush® Island Farms, and each mini tablet is gentle enough to take on an empty stomach, any time throughout the day.",
-                                                        "footer": "Active coenzyme form of B12",
-                                                        "image": {
-                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw7bd19ec9/VITAMIN_B/W1041/10332/10332.png?sw=1000",
-                                                               "accessibilityText": "Methyl B12"
-                                                        },
-                                                        "openUrlAction": {
-                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/methyl-b12-W1041.html?cgid=energy-supplements"
-                                                        }
-                                                 }
-                                          ]
+                                   "title": "Daily Energy Nutrient Booster Powder™",
+                                   "description": "We designed MegaFood® Daily Energy Nutrient Booster Powder™ to help sustain physical and mental stamina*. It combines FoodState® B12, essential for healthy red blood cell formation, with chromium, which supports a healthy metabolism*, along with a powerful blend of herbs and roots—ashwagandha, eleuthero, beet root, and green tea leaf extract—for added phytochemicals and support during times of stress*. Mix with your favorite juice or smoothie, sip, and enjoy!",
+                                   "footer": "Designed to help sustain the body and mind",
+                                   "image": {
+                                          "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw0935e9da/BOOSTER/W1015/60136/60136.png?sw=1000",
+                                          "accessibilityText": "Daily Energy"
+                                   },
+                                   "openUrlAction": {
+                                          "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/daily-energy-nutrient-booster-powder-W1015.html?cgid=energy-supplements"
+                                   }
+                            },
+                            {
+                                   "title": "Blood Builder® Minis",
+                                   "description": "MegaFood® Blood Builder® Minis takes everything you love about our original Blood Builder and delivers it to you in a convenient, twice-daily tablet. It’s clinically proven to increase iron levels and reduce fatigue without common gastrointestinal side effects such as nausea or constipation (there, we said it!)†. We make it with nourishing whole foods, like beets from Stahlbush® Island Farms and organic oranges from Uncle Matt’s Organic, plus folic acid, and B12 for healthy red blood cell production, and vitamin C to support iron absorption. Oh, and did we tell you it’s safe to take on an empty stomach? If building your blood without missing a beet (see what we did there?) sounds up your alley, this is the product for you*.",
+                                   "footer": "Clinically proven to increase iron levels",
+                                   "image": {
+                                          "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw40af8513/MINERALS/W1009/10337/10337.png?sw=1000",
+                                          "accessibilityText": "Blood Builder Minis"
+                                   },
+                                   "openUrlAction": {
+                                          "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/blood-builder-minis-W1009.html?cgid=energy-supplements"
+                                   }
+                            },
+                            {
+                                   "title": "Vegan B12",
+                                   "description": "Plant-based? We’ve got your back! Support healthy blood cell formation (and optimized performance, since healthy blood delivers optimal oxygen, and oxygen = life!) with MegaFood® Vegan B12*. We included synergistic vitamins B6 and folic acid to help support your natural physical and mental energy*. This convenient mini-tablet is easy to swallow, and can be taken any time of the day.",
+                                   "footer": "Supports healthy energy levels",
+                                   "image": {
+                                          "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw993a94e1/VITAMIN_B/W1061/12001/12001.png?sw=1000",
+                                          "accessibilityText": "Vegan B12"
+                                   },
+                                   "openUrlAction": {
+                                          "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/vegan-b12-W1061.html?cgid=energy-supplements"
+                                   }
+                            },
+                            {
+                                   "title": "Adrenal Strength®",
+                                   "description": "Got stress? (Who doesn’t?!) MegaFood® Adrenal Strength® nourishes adrenal glands depleted by everyday physical, mental and and emotional stress with the help of Sensoril®, a clinically-studied extract derived from ashwagandha root shown to promote feelings of wellbeing and balance* (say ‘Ahh’), plus organic whole orange from Uncle Matt’s Organic, brown rice from Lundberg Family Farms and FoodState® Magnesium. Show fatigue and tension the door—and say hello to restored adrenal function*.",
+                                   "footer": "Promotes healthy stress response and wards off fatigue",
+                                   "image": {
+                                          "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw6cb54bee/MOOD/W1001/20021/20021.png?sw=1000",
+                                          "accessibilityText": "Adrenal Strength"
+                                   },
+                                   "openUrlAction": {
+                                          "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/adrenal-strength-W1001.html?cgid=energy-supplements"
+                                   }
+                            },
+                            {
+                                   "title": "Gummy B12 Energy - Ginger",
+                                   "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds*—no artificial or added colors, flavors or preservatives, period. These Ginger B12 gummies deliver a unique and yummy ginger root zing from Kauai Organic Farms. Not too spicy—just right! Plus, B12 helps support cellular energy levels and production*.",
+                                   "footer": "Supports cellular energy production",
+                                   "image": {
+                                          "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw63341d5c/VITAMIN_B/W1023/10346/10346.png?sw=1000",
+                                          "accessibilityText": "Gummy B12 Energy - Ginger"
+                                   },
+                                   "openUrlAction": {
+                                          "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/gummy-b12-energy---ginger-W1023.html?cgid=energy-supplements"
+                                   }
+                            },
+                            {
+                                   "title": "Gummy B12 Energy - Cranberry",
+                                   "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds*—no artificial or added colors, flavors or preservatives, period—plus they’re easy to chew and swallow. 24 mcg of B12 help support cellular energy levels and production; tart, farm-fresh cranberry from James Lake Farms in Three Lakes, Wisconsin give our gummies real berry flavor (and color!).",
+                                   "footer": "Supports cellular energy production",
+                                   "image": {
+                                          "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwf50fa9a6/VITAMIN_B/W1024/10347/10347.png?sw=1000",
+                                          "accessibilityText": "Gummy B12 Energy - Cranberry"
+                                   },
+                                   "openUrlAction": {
+                                          "url": "https://www.megafood.com/gummies/gummy-b12-energy-cranberry-W1024.html?cgid=energy-supplements"
+                                   }
+                            },
+                            {
+                                   "title": "Balanced B Complex",
+                                   "description": "Want more pep in your step? MegaFood® Balanced B Complex supports your nervous system and assists in the conversion of food into energy with its balanced ratio of FoodState® B complex vitamins and nourishing whole foods from our family farm partners, like organic kale from Foxy Organic and brown rice from Lundberg Family Farms*. It can be taken anytime throughout the day, even on an empty stomach.",
+                                   "footer": "Promotes healthy energy levels",
+                                   "image": {
+                                          "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwb2b1fabe/VITAMIN_B/W1006/10167/10167.png?sw=1000",
+                                          "accessibilityText": "Balanced B Complex"
+                                   },
+                                   "openUrlAction": {
+                                          "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/balanced-b-complex-W1006.html?cgid=energy-supplements"
+                                   }
+                            },
+                            {
+                                   "title": "Thyroid Strength®",
+                                   "description": "A healthy thyroid means healthy metabolism—and a healthy mood, mental focus and cardiovascular system*! MegaFood® Thyroid Strength® combines thyroid-supporting FoodState® minerals with L-tyrosine, Sensoril® ashwagandha and other herbal extracts to support thyroid health*.",
+                                   "footer": "Supports thyroid health and metabolic activity",
+                                   "image": {
+                                          "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dweee385f2/MOOD/W1055/20027/20027.png?sw=1000",
+                                          "accessibilityText": "Thyroid Strength"
+                                   },
+                                   "openUrlAction": {
+                                          "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/thyroid-strength-W1055.html?cgid=energy-supplements"
+                                   }
+                            },
+                            {
+                                   "title": "Methyl B12",
+                                   "description": "MegaFood® Methyl B12 supports heart and blood health through methylated (active) forms of folate, B12 and B6, and helps to maintain healthy levels of homocysteine, an amino acid found in the blood*. These vitamins are delivered with nourishing, whole foods from Lundberg Family Farms and Stahlbush® Island Farms, and each mini tablet is gentle enough to take on an empty stomach, any time throughout the day.",
+                                   "footer": "Active coenzyme form of B12",
+                                   "image": {
+                                          "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw7bd19ec9/VITAMIN_B/W1041/10332/10332.png?sw=1000",
+                                          "accessibilityText": "Methyl B12"
+                                   },
+                                   "openUrlAction": {
+                                          "url": "https://www.megafood.com/vitamins-health-needs-goals/energy-supplements/methyl-b12-W1041.html?cgid=energy-supplements"
                                    }
                             }
                      ]
-              }
-       }
 };
 
 const immuneRich = {
@@ -754,5 +739,11 @@ const sportRich = {
        }
 };
 
-
+exports.getResponses = (intent)=>{
+       let payload = {};
+       if (intent === 'energyRich'){
+              payload = energyRich;
+       }
+       return payload;
+};
 
