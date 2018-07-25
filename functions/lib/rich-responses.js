@@ -837,7 +837,11 @@ const healthyAging = {
                                                         },
                                                         "openUrlAction": {
                                                                "url": "https://www.megafood.com/vitamins-health-needs-goals/aging-support-supplements/multi-for-women-55%2B-W1047.html?cgid=aging-support-supplements"
-                                                        }
+                                                        },
+                                                        "parameters":{
+                                                               'user-gender': 'female',
+                                                               'age': '55'
+                                                        },
                                                  },
                                                  {
                                                         "title": "MegaFlora® for Over 50",
@@ -849,7 +853,10 @@ const healthyAging = {
                                                         },
                                                         "openUrlAction": {
                                                                "url": "https://www.megafood.com/vitamins-health-needs-goals/aging-support-supplements/megaflora-for-over-50-W1037.html?cgid=aging-support-supplements"
-                                                        }
+                                                        },
+                                                        "parameters":{
+                                                               'age': '50'
+                                                        },
                                                  },
                                                  {
                                                         "title": "Women Over 40™ One Daily",
@@ -861,7 +868,11 @@ const healthyAging = {
                                                         },
                                                         "openUrlAction": {
                                                                "url": "https://www.megafood.com/vitamins-health-needs-goals/aging-support-supplements/women-over-40-one-daily-W1065.html?cgid=aging-support-supplements"
-                                                        }
+                                                        },
+                                                        "parameters":{
+                                                               'user-gender': 'female',
+                                                               'age': '40'
+                                                        },
                                                  },
                                                  {
                                                         "title": "Men Over 40™ One Daily",
@@ -873,7 +884,12 @@ const healthyAging = {
                                                         },
                                                         "openUrlAction": {
                                                                "url": "https://www.megafood.com/vitamins-health-needs-goals/aging-support-supplements/men-over-40-one-daily-W1039.html?cgid=aging-support-supplements"
-                                                        }
+                                                        },
+                                                        "parameters":{
+                                                               'user-gender': 'male',
+                                                               'age': '40'
+                                                        },
+
                                                  },
                                                  {
                                                         "title": "Adult B-Centered™",
@@ -885,7 +901,10 @@ const healthyAging = {
                                                         },
                                                         "openUrlAction": {
                                                                "url": "https://www.megafood.com/vitamins-health-needs-goals/aging-support-supplements/adult-b-centered-W1002.html?cgid=aging-support-supplements"
-                                                        }
+                                                        },
+                                                        "parameters":{
+                                                               'age': '20'
+                                                        },
                                                  },
                                                  {
                                                         "title": "Multi for Men 55+",
@@ -897,7 +916,11 @@ const healthyAging = {
                                                         },
                                                         "openUrlAction": {
                                                                "url": "https://www.megafood.com/vitamins-health-needs-goals/aging-support-supplements/multi-for-men-55%2B-W1044.html?cgid=aging-support-supplements"
-                                                        }
+                                                        },
+                                                        "parameters":{
+                                                               'user-gender': 'male',
+                                                               'age': '55'
+                                                        },
                                                  },
                                                  {
                                                         "title": "Multi for Women 40+",
@@ -909,7 +932,11 @@ const healthyAging = {
                                                         },
                                                         "openUrlAction": {
                                                                "url": "https://www.megafood.com/vitamins-health-needs-goals/aging-support-supplements/multi-for-women-40%2B-W1046.html?cgid=aging-support-supplements"
-                                                        }
+                                                        },
+                                                        "parameters":{
+                                                               'user-gender': 'female',
+                                                               'age': '40'
+                                                        },
                                                  },
                                                  {
                                                         "title": "Multi for Men 40+",
@@ -921,7 +948,11 @@ const healthyAging = {
                                                         },
                                                         "openUrlAction": {
                                                                "url": "https://www.megafood.com/vitamins-health-needs-goals/aging-support-supplements/multi-for-men-40%2B-W1043.html?cgid=aging-support-supplements"
-                                                        }
+                                                        },
+                                                        "parameters":{
+                                                               'user-gender': 'male',
+                                                               'age': '40'
+                                                        },
                                                  }
                                           ]
                                    }
@@ -929,9 +960,15 @@ const healthyAging = {
                      ]
               }
 };
+/***
+ * This function maps the intents to it's wellnes goals products and extracts parameters to filter results.
+ * @param intent
+ * @param params
+ */
 
-exports.getResponses = (intent)=>{
+exports.getResponses = (intent, params)=>{
        let payload = {};
+
        if (intent === 'energyRich'){
               payload = energyRich;
        }
@@ -948,6 +985,16 @@ exports.getResponses = (intent)=>{
               payload = healthyAging;
        }
 
+       let items = payload.richResponse.items[1].carouselBrowse.items;
+
+       if(params.hasOwnProperty('user-gender')){
+              console.log(params['user-gender']);
+              payload.richResponse.items[1].carouselBrowse.items = filterParameter(items,'user-gender',params['user-gender']);
+       }
+
        return payload;
 };
 
+function filterParameter (payload, param, value) {
+        return payload.filter(item => item.parameters[param] === value || item.parameters[param] === undefined);
+}

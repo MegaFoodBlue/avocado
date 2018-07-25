@@ -39,21 +39,20 @@ function buildSingleResponse (products, index, conv){
 
 
 exports.initial = (agent, category) => {
-       let data = rich.getResponses(category); // Retrieves JSON object from ../lib/rich-responses.js
+       let params = agent.parameters;
+       let data = rich.getResponses(category, params); // Retrieves JSON object from ../lib/rich-responses.js
        let simpleResponse = data.richResponse.items[0].simpleResponse.textToSpeech;
        let products = data.richResponse.items[1].carouselBrowse;
 
        let conv = agent.conv(); // Get Actions on Google library conv instance
 
-       console.log(conv.data.products);
+
        if(conv.data.products === undefined){
               conv.data.products = products.items;
-              console.log(conv.data.products);
               console.log('products are undefined, setting products to conv data');
        }
        if(conv.data.index === undefined){
               conv.data.index = 0;
-              console.log(conv.data.index + '<<<<<<<------- Index in conv data');
        }
 
        const hasScreen = conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT'); // Determine surface screen capability.
@@ -115,9 +114,4 @@ exports.previous= (agent) => {
        }
        console.log(conv.data.index);
        console.log(conv.data.products);
-};
-
-exports.filterParameters = (agent)=>{
-
-
 };
