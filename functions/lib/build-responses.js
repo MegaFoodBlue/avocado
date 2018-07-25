@@ -116,3 +116,8 @@ exports.previous= (agent) => {
        console.log(conv.data.index);
        console.log(conv.data.products);
 };
+
+exports.filterParameters = (agent)=>{
+
+
+};

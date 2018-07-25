@@ -8,5 +8,5 @@ module.exports = (agent) => {
        let conv = agent.conv();
        conv.data.products = undefined;
        conv.data.index = undefined;
-       build.initial(agent, 'boneHealthRich');
+       build.initial(agent, 'digestiveRich');
 };
