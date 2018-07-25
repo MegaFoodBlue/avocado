@@ -6,7 +6,7 @@
 
 const functions = require('firebase-functions');
 const {WebhookClient} = require('dialogflow-fulfillment');
-const build = require('./lib/build-responses');
+
 
 
 process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
@@ -61,6 +61,14 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
        intentMap.set('prenatal-postnatal', require('./intent-handlers/prenatal-postnatal'));
        intentMap.set('prenatal-postnatal-next', require('./intent-handlers/prenatal-postnatal-next'));
        intentMap.set('prenatal-postnatal-previous', require('./intent-handlers/prenatal-postnatal-previous'));
+
+       intentMap.set('sleep-stress', require('./intent-handlers/sleep-stress'));
+       intentMap.set('sleep-stress-next', require('./intent-handlers/sleep-stress-next'));
+       intentMap.set('sleep-stress-previous', require('./intent-handlers/sleep-stress-previous'));
+
+       intentMap.set('sport', require('./intent-handlers/sport'));
+       intentMap.set('sport-next', require('./intent-handlers/sport-next'));
+       intentMap.set('sport-previous', require('./intent-handlers/sport-previous'));
 
        intentMap.set('default-supplements', require('./intent-handlers/default-supplements'));
 

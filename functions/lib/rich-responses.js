@@ -727,7 +727,7 @@ const sportRich = {
                                           "items": [
                                                  {
                                                         "title": "Daily Turmeric Nutrient Booster Powder™",
-                                                        "description": "Work out—and bounce back!—with MegaFood® Daily Turmeric Booster Powder™. It combines a protective, restorative combination of whole foods, herbs and extracts, including FoodState® Vitamin C and three powerful blends: our Whole Body Recovery Blend (replenishing turmeric, holy basil and BioPerine® black pepper extract), Harvest Fruit Blend (health-promoting tart cherry, black raspberry, wild blueberry, and cranberry extracts), and Fruit Phenolic Blend (organic whole orange from Uncle Matt’s Organic, plus blueberry and cranberry for an array of antioxidants)  . Mix with your favorite juice or smoothie, sip, and enjoy!",
+                                                        "description": "Work out—and bounce back!—with MegaFood® Daily Turmeric Booster Powder™. It combines a protective, restorative combination of whole foods, herbs and extracts, including FoodState® Vitamin C and three powerful blends: our Whole Body Recovery Blend, Harvest Fruit Blend, and Fruit Phenolic Blend. Mix with your favorite juice or smoothie, sip, and enjoy!",
                                                         "footer": footer,
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwb984168e/BOOSTER/W1019/W1019.png?sw=1000",
@@ -763,7 +763,7 @@ const sportRich = {
                                                  },
                                                  {
                                                         "title": "Turmeric Strength™ for Liver",
-                                                        "description": "Go ahead, show your liver some love! MegaFood® Turmeric Strength™ for Liver combines a powerful array of healthful compounds, whole foods and extracts that support an already healthy inflammation response of the liver  , and features real, farm fresh turmeric root from Kauai Organic Farms to deliver 300 mg of curcumin per serving  . We also added BioPerine®, a patented black pepper extract that helps support the absorption of curcumin (that otherwise on its own can be hard for the body to assimilate)  , and milk thistle seed, rich in silymarin and shown to promote liver health  , while schisandra berry provides added antioxidants",
+                                                        "description": "Go ahead, show your liver some love! MegaFood® Turmeric Strength™ for Liver combines a powerful array of healthful compounds, whole foods and extracts that support an already healthy inflammation response of the liver  , and features real, farm fresh turmeric root from Kauai Organic Farms to deliver 300 mg of curcumin per serving. We also added BioPerine®, a patented black pepper extract that helps support the absorption of curcumin , and milk thistle seed, rich in silymarin and shown to promote liver health, while schisandra berry provides added antioxidants.",
                                                         "footer": footer,
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw4006f980/INFLAMMATION/W1057/10306/10306.png?sw=1000",
@@ -775,7 +775,7 @@ const sportRich = {
                                                  },
                                                  {
                                                         "title": "Daily Energy Nutrient Booster Powder™",
-                                                        "description": "We designed MegaFood® Daily Energy Nutrient Booster Powder™ to help sustain physical and mental stamina  . It combines FoodState® B12, essential for healthy red blood cell formation, with chromium, which supports a healthy metabolism  , along with a powerful blend of herbs and roots—ashwagandha, eleuthero, beet root, and green tea leaf extract—for added phytochemicals and support during times of stress  . Mix with your favorite juice or smoothie, sip, and enjoy!",
+                                                        "description": "We designed MegaFood® Daily Energy Nutrient Booster Powder™ to help sustain physical and mental stamina  . It combines FoodState® B12, essential for healthy red blood cell formation, with chromium, which supports a healthy metabolism  , along with a powerful blend of herbs and roots. Mix with your favorite juice or smoothie, sip, and enjoy!",
                                                         "footer": footer,
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw0935e9da/BOOSTER/W1015/60136/60136.png?sw=1000",
@@ -799,7 +799,7 @@ const sportRich = {
                                                  },
                                                  {
                                                         "title": "Gummy B12 Energy - Cranberry",
-                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds  —no artificial or added colors, flavors or preservatives, period—plus they’re easy to chew and swallow. 24 mcg of B12 help support cellular energy levels and production; tart, farm-fresh cranberry from James Lake Farms in Three Lakes, Wisconsin give our gummies real berry flavor (and color!)",
+                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds;  no artificial or added colors, flavors or preservatives, period—plus they’re easy to chew and swallow. 24 mcg of B12 help support cellular energy levels and production;",
                                                         "footer": footer,
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwf50fa9a6/VITAMIN_B/W1024/10347/10347.png?sw=1000",
@@ -992,6 +992,12 @@ exports.getResponses = (intent, params)=>{
        }
        if(intent === 'prenatalPostnatalRich'){
               payload = prenatalPostnatalRich;
+       }
+       if(intent === 'sleepStressRich'){
+              payload = sleepStressRich;
+       }
+       if(intent === 'sportRich'){
+              payload = sportRich;
        }
        let items = payload.richResponse.items[1].carouselBrowse.items;
 
