@@ -54,6 +54,14 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
        intentMap.set('energy-next', require('./intent-handlers/energy-next'));
        intentMap.set('energy-previous', require('./intent-handlers/energy-previous'));
 
+       intentMap.set('kids-health', require('./intent-handlers/kids-health'));
+       intentMap.set('kids-health-next', require('./intent-handlers/kids-health-next'));
+       intentMap.set('kids-health-previous', require('./intent-handlers/kids-health-previous'));
+
+       intentMap.set('prenatal-postnatal', require('./intent-handlers/prenatal-postnatal'));
+       intentMap.set('prenatal-postnatal-next', require('./intent-handlers/prenatal-postnatal-next'));
+       intentMap.set('prenatal-postnatal-previous', require('./intent-handlers/prenatal-postnatal-previous'));
+
        intentMap.set('default-supplements', require('./intent-handlers/default-supplements'));
 
        agent.handleRequest(intentMap);

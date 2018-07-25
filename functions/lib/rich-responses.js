@@ -987,7 +987,12 @@ exports.getResponses = (intent, params)=>{
        if(intent === 'immuneRich'){
               payload = immuneRich;
        }
-
+       if(intent === 'kidsHealthRich'){
+              payload = kidsHealthRich;
+       }
+       if(intent === 'prenatalPostnatalRich'){
+              payload = prenatalPostnatalRich;
+       }
        let items = payload.richResponse.items[1].carouselBrowse.items;
 
        if(params.hasOwnProperty('user-gender')){
