@@ -5,5 +5,5 @@ const build = require('../lib/build-responses');
 
 
 module.exports = (agent) => {
-       build.initial(agent, 'beautyAndSkinRich');
+       build.previous(agent);
 };

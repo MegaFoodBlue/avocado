@@ -31,6 +31,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
 
        intentMap.set('beauty-skin', require('./intent-handlers/beauty-skin'));
        intentMap.set('energy', require('./intent-handlers/energy'));
+       intentMap.set('energy-next', require('./intent-handlers/energy-next'));
+       intentMap.set('energy-previous', require('./intent-handlers/energy-previous'));
        intentMap.set('default-supplements', require('./intent-handlers/default-supplements'));
 
        agent.handleRequest(intentMap);

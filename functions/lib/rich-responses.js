@@ -2,10 +2,88 @@
 /* jshint node: true */
 
 'use strict';
+const footer = 'This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.';
+
+const boneHealthRich = {
+
+              "richResponse": {
+                     "items": [
+                            {
+                                   "simpleResponse": {
+                                          "textToSpeech": "Optimally-paired vitamins and minerals can help support already strong bones. Our bone health supplements are easy to digest too! Take with a meal for optimal absorption."
+                                   }
+                            },
+                            {
+                                   "carouselBrowse": {
+                                          "items": [
+                                                 {
+                                                        "title": "Bone Health",
+                                                        "description": "MegaFood Bone Health aims to keep yours strong and healthy. We include optimal levels of vitamins and minerals—we’re talking 1000 IU (25 mcg) of vitamin D, 100 mg of vitamin C, 500 mg of calcium, and 300 mg of magnesium, plus vitamins K1 and K2—to support bone health and mood... (formulated by award-winning integrative physician, Tieraona Low Dog, M.D.), Bone Health is gentle on the stomach, and best taken with food.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwa4e3344b/MINERALS/W1010/10329/10329.png?sw=1000",
+                                                               "accessibilityText": "Bone Health"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-for-bone-health/bone-health-W1010.html?cgid=vitamins-for-bone-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Calcium",
+                                                        "description": "Say cheese!...  MegaFood Calcium supports healthy bones and teeth. FoodState Calcium, delivered with wholesome nutritional yeast, combines with organic nettle leaf to provide synergistic trace minerals. It can be taken any time of the day, even on an empty stomach",
+                                                        "footer": "*This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw5e64a67e/MINERALS/W1011/10185/10185.png?sw=1000",
+                                                               "accessibilityText": "Calcium"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-for-bone-health/calcium-W1011.html?cgid=vitamins-for-bone-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Calcium, Magnesium and Potassium",
+                                                        "description": "MegaFood® Calcium, Magnesium and Potassium delivers a triad of health-promoting minerals  with wholesome nutritional yeast, and is combined with an Organic Trace Mineral Blend of organic nettle leaf, organic dandelion root and organic parsley to help maintain already healthy blood pressure levels and cardiovascular health.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw1d894c39/MINERALS/W1012/10231/10231.png?sw=1000",
+                                                               "accessibilityText": "Calcium, Magnesium and Potassium"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-for-bone-health/calcium-magnesium-and-potassium-W1012.html?cgid=vitamins-for-bone-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Vitamin D-3 1000 IU",
+                                                        "description": "Vitamin D3 is a powerhouse vitamin that aids in healthy bones, hormones and immune function, and maintaining optimal levels can contribute to an overall sense of wellbeing (more ‘Om,’ less ‘Um?’). MegaFood® Vitamin D3 1000 IU (25 mcg) is delivered with real, whole foods that provide synergistic cofactors.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw5ea13437/VITAMIN_D/W1062/10116/10116.png?sw=1000",
+                                                               "accessibilityText": "Vitamin D-3 1000 IU"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-for-bone-health/vitamin-d3-1000-iu-W1062.html?cgid=vitamins-for-bone-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Vitamin D-3 2000 IU",
+                                                        "description": "MegaFood® Vitamin D3 2000 IU (50 mcg) is delivered with organic whole foods that provide synergistic cofactors. It’s easy to digest, even on an empty stomach.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwa2c23189/VITAMIN_D/W1063/10220/10220.png?sw=1000",
+                                                               "accessibilityText": "Vitamin D-3 2000 IU"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-for-bone-health/vitamin-d3-2000-iu-W1063.html?cgid=vitamins-for-bone-health"
+                                                        }
+                                                 }
+                                          ]
+                                   }
+                            }
+                     ]
+              }
+};
 
 const sleepStressRich = {
-       "conversationToken": "[\"actions_capability_screen_output\"]",
-       "finalResponse": {
               "richResponse": {
                      "items": [
                             {
@@ -18,8 +96,8 @@ const sleepStressRich = {
                                           "items": [
                                                  {
                                                         "title": "Adrenal Strength®",
-                                                        "description": "Got stress? (Who doesn’t?!) MegaFood® Adrenal Strength® nourishes adrenal glands depleted by everyday physical, mental and and emotional stress with the help of Sensoril®, a clinically-studied extract derived from ashwagandha root shown to promote feelings of wellbeing and balance* (say ‘Ahh’), plus organic whole orange from Uncle Matt’s Organic, brown rice from Lundberg Family Farms and FoodState® Magnesium. Show fatigue and tension the door—and say hello to restored adrenal function",
-                                                        "footer": "Promotes healthy stress response and wards off fatigue",
+                                                        "description": "Got stress?... Who doesn’t?...  MegaFood® Adrenal Strength® nourishes adrenal glands depleted by everyday physical, mental and and emotional stress with the help of Sensoril®, a clinically-studied extract derived from ashwagandha root shown to promote feelings of wellbeing and balance* (say ‘Ahh’), plus organic whole orange from Uncle Matt’s Organic, brown rice from Lundberg Family Farms and FoodState® Magnesium. Show fatigue and tension the door—and say hello to restored adrenal function",
+                                                        "footer": footer,
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw6cb54bee/MOOD/W1001/20021/20021.png?sw=1000",
                                                                "accessibilityText": "Adrenal Strength®"
@@ -31,7 +109,7 @@ const sleepStressRich = {
                                                  {
                                                         "title": "Dream Release™",
                                                         "description": "Relax, restore, rejuvenate: MegaFood® Dream Release™ is designed to promote deep, restorative sleep*. Valerian and California poppy are traditionally used to promote restful sleep in those with occasional sleeplessness, while calming FoodState® Magnesium and Sensoril® ashwagandha help release tension*. (Comfy ‘jammies: that’s all you.)",
-                                                        "footer": "Promotes a deep and restful sleep",
+                                                        "footer": footer,
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw2d2e9507/SLEEP/W1020/10004/10004.png?sw=1000",
                                                                "accessibilityText": "Dream Release™"
@@ -42,8 +120,8 @@ const sleepStressRich = {
                                                  },
                                                  {
                                                         "title": "Thyroid Strength®",
-                                                        "description": "A healthy thyroid means healthy metabolism—and a healthy mood, mental focus and cardiovascular system*! MegaFood® Thyroid Strength® combines thyroid-supporting FoodState® minerals with L-tyrosine, Sensoril® ashwagandha and other herbal extracts to support thyroid health*.",
-                                                        "footer": "Supports thyroid health and metabolic activity",
+                                                        "description": "A healthy thyroid means healthy metabolism—and a healthy mood, mental focus and cardiovascular system! MegaFood® Thyroid Strength® combines thyroid-supporting FoodState® minerals with L-tyrosine, Sensoril® ashwagandha and other herbal extracts to support thyroid health*.",
+                                                        "footer": footer,
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dweee385f2/MOOD/W1055/20027/20027.png?sw=1000",
                                                                "accessibilityText": "Thyroid Strength®"
@@ -55,7 +133,7 @@ const sleepStressRich = {
                                                  {
                                                         "title": "Un-Stress®",
                                                         "description": "Take a deep breath...and replenish key nutrients that are easily depleted during times of emotional, mental and physical stress with MegaFood® Un-Stress®. FoodState Nutrients™, including B vitamins, vitamin C and zinc, have your immune system’s back*, while our Soothing Herbal Blend delivers supportive organic herbs, including organic ashwagandha, organic chamomile flower and organic astragalus root*.",
-                                                        "footer": "Helps ward off fatigue",
+                                                        "footer": footer,
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw0fc4ea69/MOOD/W1060/10157/10157.png?sw=1000",
                                                                "accessibilityText": "Un-Stress®"
@@ -69,12 +147,9 @@ const sleepStressRich = {
                             }
                      ]
               }
-       }
 };
 
 const digestiveRich = {
-       "conversationToken": "[\"actions_capability_screen_output\"]",
-       "finalResponse": {
               "richResponse": {
                      "items": [
                             {
@@ -87,7 +162,7 @@ const digestiveRich = {
                                           "items": [
                                                  {
                                                         "title": "MegaFlora®",
-                                                        "description": "‘Go with your gut’! MegaFood® MegaFlora® is our signature probiotic, designed to support intestinal health, immunity and bowel regularity*. Our proprietary blend of 14 unique strains of probiotics provide 20 billion active bacteria that help restore and maintain the balance of healthy intestinal probiotics*. MegaFlora is tested free from gluten, dairy and soy. We recommend storing yours in the fridge or freezer, and taking it once daily with a meal.",
+                                                        "description": "‘Go with your gut’! MegaFood® MegaFlora® is our signature probiotic, designed to support intestinal health, immunity and bowel regularity. Our proprietary blend of 14 unique strains of probiotics provide 20 billion active bacteria that help restore and maintain the balance of healthy intestinal probiotics*. MegaFlora is tested free from gluten, dairy and soy. We recommend storing yours in the fridge or freezer, and taking it once daily with a meal.",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw0711f951/PROBIOTICS/W1034/10205/10205.png?sw=1000",
                                                                "accessibilityText": "MegaFlora"
@@ -156,7 +231,6 @@ const digestiveRich = {
                             }
                      ]
               }
-       }
 };
 
 const beautyAndSkinRich = {
@@ -214,7 +288,7 @@ const energyRich = {
                                           "items": [
                                                  {
                                                         "title": "Blood Builder®",
-                                                        "description": "MegaFood® Blood Builder® is one of our top-selling products for a reason: it’s clinically proven to increase iron levels and reduce fatigue without common gastrointestinal side effects such as nausea or constipation (there, we said it!)†. We make it with nourishing, whole foods, like beets from Stahlbush® Island Farms and organic oranges from Uncle Matt’s Organic, plus folic acid and B12 for healthy red blood cell production, and vitamin C to support iron absorption. Oh, and did we tell you it’s safe to take on an empty stomach? If building your blood without missing a beet (see what we did there?) sounds up your alley, this is the product for you*.",
+                                                        "description": "MegaFood® Blood Builder® is one of our top-selling products for a reason: it’s clinically proven to increase iron levels and reduce fatigue without common gastrointestinal side effects... We make it with nourishing, whole foods, like beets from Stahlbush® Island Farms and organic oranges from Uncle Matt’s Organic, plus folic acid and B12 for healthy red blood cell production, and vitamin C to support iron absorption. Oh, and did we tell you it’s safe to take on an empty stomach?",
                                                         "footer": "Clinically proven to increase iron levels",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw4e51bdae/MINERALS/W1008/10170/10170.png?sw=1000",
@@ -226,7 +300,7 @@ const energyRich = {
                                                  },
                                                  {
                                                         "title": "Daily Energy Nutrient Booster Powder™",
-                                                        "description": "We designed MegaFood® Daily Energy Nutrient Booster Powder™ to help sustain physical and mental stamina*. It combines FoodState® B12, essential for healthy red blood cell formation, with chromium, which supports a healthy metabolism*, along with a powerful blend of herbs and roots—ashwagandha, eleuthero, beet root, and green tea leaf extract—for added phytochemicals and support during times of stress*. Mix with your favorite juice or smoothie, sip, and enjoy!",
+                                                        "description": "We designed MegaFood® Daily Energy Nutrient Booster Powder™ to help sustain physical and mental stamina. It combines FoodState® B12, essential for healthy red blood cell formation, with chromium, which supports a healthy metabolism, along with a powerful blend of herbs and roots—ashwagandha, eleuthero, beet root, and green tea leaf extract—for added phytochemicals and support during times of stress. Mix with your favorite juice or smoothie, sip, and enjoy!",
                                                         "footer": "Designed to help sustain the body and mind",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw0935e9da/BOOSTER/W1015/60136/60136.png?sw=1000",
@@ -238,7 +312,7 @@ const energyRich = {
                                                  },
                                                  {
                                                         "title": "Blood Builder® Minis",
-                                                        "description": "MegaFood® Blood Builder® Minis takes everything you love about our original Blood Builder and delivers it to you in a convenient, twice-daily tablet. It’s clinically proven to increase iron levels and reduce fatigue without common gastrointestinal side effects such as nausea or constipation (there, we said it!)†. We make it with nourishing whole foods, like beets from Stahlbush® Island Farms and organic oranges from Uncle Matt’s Organic, plus folic acid, and B12 for healthy red blood cell production, and vitamin C to support iron absorption. Oh, and did we tell you it’s safe to take on an empty stomach? If building your blood without missing a beet (see what we did there?) sounds up your alley, this is the product for you*.",
+                                                        "description": "MegaFood® Blood Builder® Minis takes everything you love about our original Blood Builder and delivers it to you in a convenient, twice-daily tablet.",
                                                         "footer": "Clinically proven to increase iron levels",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw40af8513/MINERALS/W1009/10337/10337.png?sw=1000",
@@ -250,7 +324,7 @@ const energyRich = {
                                                  },
                                                  {
                                                         "title": "Vegan B12",
-                                                        "description": "Plant-based? We’ve got your back! Support healthy blood cell formation (and optimized performance, since healthy blood delivers optimal oxygen, and oxygen = life!) with MegaFood® Vegan B12*. We included synergistic vitamins B6 and folic acid to help support your natural physical and mental energy*. This convenient mini-tablet is easy to swallow, and can be taken any time of the day.",
+                                                        "description": "Plant-based? We’ve got your back! Support healthy blood cell formation with MegaFood® Vegan B12  . We included synergistic vitamins B6 and folic acid to help support your natural physical and mental energy  . This convenient mini-tablet is easy to swallow, and can be taken any time of the day.",
                                                         "footer": "Supports healthy energy levels",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw993a94e1/VITAMIN_B/W1061/12001/12001.png?sw=1000",
@@ -262,7 +336,7 @@ const energyRich = {
                                                  },
                                                  {
                                                         "title": "Adrenal Strength®",
-                                                        "description": "Got stress? (Who doesn’t?!) MegaFood® Adrenal Strength® nourishes adrenal glands depleted by everyday physical, mental and and emotional stress with the help of Sensoril®, a clinically-studied extract derived from ashwagandha root shown to promote feelings of wellbeing and balance* (say ‘Ahh’), plus organic whole orange from Uncle Matt’s Organic, brown rice from Lundberg Family Farms and FoodState® Magnesium. Show fatigue and tension the door—and say hello to restored adrenal function*.",
+                                                        "description": "Got stress? (Who doesn’t?!) MegaFood® Adrenal Strength® nourishes adrenal glands depleted by everyday physical, mental and and emotional stress with the help of Sensoril®, a clinically-studied extract derived from ashwagandha root shown to promote feelings of wellbeing and balance   (say ‘Ahh’), plus organic whole orange from Uncle Matt’s Organic, brown rice from Lundberg Family Farms and FoodState® Magnesium. Show fatigue and tension the door—and say hello to restored adrenal function  .",
                                                         "footer": "Promotes healthy stress response and wards off fatigue",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw6cb54bee/MOOD/W1001/20021/20021.png?sw=1000",
@@ -274,7 +348,7 @@ const energyRich = {
                                                  },
                                                  {
                                                         "title": "Gummy B12 Energy - Ginger",
-                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds*—no artificial or added colors, flavors or preservatives, period. These Ginger B12 gummies deliver a unique and yummy ginger root zing from Kauai Organic Farms. Not too spicy—just right! Plus, B12 helps support cellular energy levels and production*.",
+                                                        "description": "Gummy B12 Energy - Ginger deliver a unique and yummy ginger root zing from Kauai Organic Farms. Not too spicy—just right! Plus, B12 helps support cellular energy levels and production  .",
                                                         "footer": "Supports cellular energy production",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw63341d5c/VITAMIN_B/W1023/10346/10346.png?sw=1000",
@@ -286,7 +360,7 @@ const energyRich = {
                                                  },
                                                  {
                                                         "title": "Gummy B12 Energy - Cranberry",
-                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds*—no artificial or added colors, flavors or preservatives, period—plus they’re easy to chew and swallow. 24 mcg of B12 help support cellular energy levels and production; tart, farm-fresh cranberry from James Lake Farms in Three Lakes, Wisconsin give our gummies real berry flavor (and color!).",
+                                                        "description": "Gummy B12 Energy - Cranberry. 24 mcg of B12 help support cellular energy levels and production; tart, farm-fresh cranberry from James Lake Farms in Three Lakes, Wisconsin give our gummies real berry flavor (and color!).",
                                                         "footer": "Supports cellular energy production",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwf50fa9a6/VITAMIN_B/W1024/10347/10347.png?sw=1000",
@@ -298,7 +372,7 @@ const energyRich = {
                                                  },
                                                  {
                                                         "title": "Balanced B Complex",
-                                                        "description": "Want more pep in your step? MegaFood® Balanced B Complex supports your nervous system and assists in the conversion of food into energy with its balanced ratio of FoodState® B complex vitamins and nourishing whole foods from our family farm partners, like organic kale from Foxy Organic and brown rice from Lundberg Family Farms*. It can be taken anytime throughout the day, even on an empty stomach.",
+                                                        "description": "Want more pep in your step?... MegaFood® Balanced B Complex supports your nervous system and assists in the conversion of food into energy with its balanced ratio of FoodState® B complex vitamins and nourishing whole foods from our family farm partners, like organic kale from Foxy Organic and brown rice from Lundberg Family Farms  . It can be taken anytime throughout the day, even on an empty stomach.",
                                                         "footer": "Promotes healthy energy levels",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwb2b1fabe/VITAMIN_B/W1006/10167/10167.png?sw=1000",
@@ -310,7 +384,7 @@ const energyRich = {
                                                  },
                                                  {
                                                         "title": "Thyroid Strength®",
-                                                        "description": "A healthy thyroid means healthy metabolism—and a healthy mood, mental focus and cardiovascular system*! MegaFood® Thyroid Strength® combines thyroid-supporting FoodState® minerals with L-tyrosine, Sensoril® ashwagandha and other herbal extracts to support thyroid health*.",
+                                                        "description": "A healthy thyroid means healthy metabolism—and a healthy mood, mental focus and cardiovascular system  ! MegaFood® Thyroid Strength® combines thyroid-supporting FoodState® minerals with L-tyrosine, Sensoril® ashwagandha and other herbal extracts to support thyroid health  .",
                                                         "footer": "Supports thyroid health and metabolic activity",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dweee385f2/MOOD/W1055/20027/20027.png?sw=1000",
@@ -322,7 +396,7 @@ const energyRich = {
                                                  },
                                                  {
                                                         "title": "Methyl B12",
-                                                        "description": "MegaFood® Methyl B12 supports heart and blood health through methylated (active) forms of folate, B12 and B6, and helps to maintain healthy levels of homocysteine, an amino acid found in the blood*. These vitamins are delivered with nourishing, whole foods from Lundberg Family Farms and Stahlbush® Island Farms, and each mini tablet is gentle enough to take on an empty stomach, any time throughout the day.",
+                                                        "description": "MegaFood® Methyl B12 supports heart and blood health through methylated (active) forms of folate, B12 and B6, and helps to maintain healthy levels of homocysteine, an amino acid found in the blood  . These vitamins are delivered with nourishing, whole foods from Lundberg Family Farms and Stahlbush® Island Farms, and each mini tablet is gentle enough to take on an empty stomach, any time throughout the day.",
                                                         "footer": "Active coenzyme form of B12",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw7bd19ec9/VITAMIN_B/W1041/10332/10332.png?sw=1000",
@@ -340,8 +414,6 @@ const energyRich = {
 };
 
 const immuneRich = {
-       "conversationToken": "[\"actions_capability_screen_output\"]",
-       "finalResponse": {
               "richResponse": {
                      "items": [
                             {
@@ -354,7 +426,7 @@ const immuneRich = {
                                           "items": [
                                                  {
                                                         "title": "Daily Turmeric Nutrient Booster Powder™",
-                                                        "description": "Work out—and bounce back!—with MegaFood® Daily Turmeric Booster Powder™. It combines a protective, restorative combination of whole foods, herbs and extracts, including FoodState® Vitamin C and three powerful blends: our Whole Body Recovery Blend (replenishing turmeric, holy basil and BioPerine® black pepper extract), Harvest Fruit Blend (health-promoting tart cherry, black raspberry, wild blueberry, and cranberry extracts), and Fruit Phenolic Blend (organic whole orange from Uncle Matt’s Organic, plus blueberry and cranberry for an array of antioxidants)*. Mix with your favorite juice or smoothie, sip, and enjoy!",
+                                                        "description": "Work out—and bounce back!—with MegaFood® Daily Turmeric Booster Powder™. It combines a protective, restorative combination of whole foods, herbs and extracts, including FoodState® Vitamin C and three powerful blends: our Whole Body Recovery Blend (replenishing turmeric, holy basil and BioPerine® black pepper extract), Harvest Fruit Blend (health-promoting tart cherry, black raspberry, wild blueberry, and cranberry extracts), and Fruit Phenolic Blend (organic whole orange from Uncle Matt’s Organic, plus blueberry and cranberry for an array of antioxidants)  . Mix with your favorite juice or smoothie, sip, and enjoy!",
                                                         "footer": "Designed to help you bounce back from your daily workout",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwb984168e/BOOSTER/W1019/W1019.png?sw=1000",
@@ -366,7 +438,7 @@ const immuneRich = {
                                                  },
                                                  {
                                                         "title": "Turmeric Strength™ for Whole Body",
-                                                        "description": "Where do we start? MegaFood® Turmeric Strength™ for Whole Body combines a powerful array of healthful compounds, whole foods and extracts that support a healthy inflammation response*, and features real, farm fresh turmeric root from Kauai Organic Farms and pure turmeric extract to deliver 481 mg of curcumin per serving*. We also added BioPerine®, a patented black pepper extract that helps support the absorption of curcumin (that otherwise on its own can be hard for the body to assimilate), while cherries and berries provide added antioxidants",
+                                                        "description": "Where do we start? MegaFood® Turmeric Strength™ for Whole Body combines a powerful array of healthful compounds, whole foods and extracts that support a healthy inflammation response  , and features real, farm fresh turmeric root from Kauai Organic Farms and pure turmeric extract to deliver 481 mg of curcumin per serving  . We also added BioPerine®, a patented black pepper extract that helps support the absorption of curcumin (that otherwise on its own can be hard for the body to assimilate), while cherries and berries provide added antioxidants",
                                                         "footer": "Delivers whole food and concentrated herbal antioxidant compounds known to support an already healthy inflammation response",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw548feab9/INFLAMMATION/W1058/10006/10006.png?sw=1000",
@@ -378,7 +450,7 @@ const immuneRich = {
                                                  },
                                                  {
                                                         "title": "Vitamin D-3 2000 IU",
-                                                        "description": "Vitamin D3 is a powerhouse that aids in healthy bones, hormones and immune function, and maintaining optimal levels can contribute to an overall sense of wellbeing (more ‘Om,’ less ‘Um?’)*. MegaFood® Vitamin D3 2000 IU (50 mcg) is delivered with organic whole foods that provide synergistic cofactors*. It’s easy to digest, even on an empty stomach.",
+                                                        "description": "Vitamin D3 is a powerhouse that aids in healthy bones, hormones and immune function, and maintaining optimal levels can contribute to an overall sense of wellbeing (more ‘Om,’ less ‘Um?’)  . MegaFood® Vitamin D3 2000 IU (50 mcg) is delivered with organic whole foods that provide synergistic cofactors  . It’s easy to digest, even on an empty stomach.",
                                                         "footer": "Promotes healthy immune function",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwa2c23189/VITAMIN_D/W1063/10220/10220.png?sw=1000",
@@ -390,7 +462,7 @@ const immuneRich = {
                                                  },
                                                  {
                                                         "title": "Daily Purify Nutrient Booster Powder™",
-                                                        "description": "Did you know? Your liver is your body’s master cleansing system—no small feat when you consider the amount of dietary and environmental pollutants it encounters each day! That’s why we designed MegaFood® Daily Purify Nutrient Booster Powder™ to gently eliminate toxins, nourish and replenish your body using a blend of dandelion, artichoke leaf and burdock root*. Farm fresh FoodState® Beet Root and Fruit Phenolic Blend combine with reishi mushroom and schisandra berry to provide antioxidants*. (Can you say ‘natural radiance’?!) Mix with your favorite juice or smoothie, sip, and enjoy!",
+                                                        "description": "Did you know? Your liver is your body’s master cleansing system—no small feat when you consider the amount of dietary and environmental pollutants it encounters each day! That’s why we designed MegaFood® Daily Purify Nutrient Booster Powder™ to gently eliminate toxins, nourish and replenish your body using a blend of dandelion, artichoke leaf and burdock root  . Farm fresh FoodState® Beet Root and Fruit Phenolic Blend combine with reishi mushroom and schisandra berry to provide antioxidants  . (Can you say ‘natural radiance’?!) Mix with your favorite juice or smoothie, sip, and enjoy!",
                                                         "footer": "Supports the gentle elimination of toxins using foods traditionally used for detoxification purposes",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwba2e0127/BOOSTER/W1018/W1018.png?sw=1000",
@@ -402,7 +474,7 @@ const immuneRich = {
                                                  },
                                                  {
                                                         "title": "Complex C",
-                                                        "description": "Immune system champion, right here*! MegaFood® Complex C takes immune-supportive FoodState® Vitamin C and combines it with two powerful blends to deliver a broad spectrum of phytonutrients*: our Organic Bioflavonoid Complex (organic amla fruit, organic green pepper, organic rose hips and organic orange peel), and Fruit Phenolic Blend (organic whole orange from Uncle Matt’s Organic, organic cranberry and organic blueberry).",
+                                                        "description": "Immune system champion, right here  ! MegaFood® Complex C takes immune-supportive FoodState® Vitamin C and combines it with two powerful blends to deliver a broad spectrum of phytonutrients  : our Organic Bioflavonoid Complex (organic amla fruit, organic green pepper, organic rose hips and organic orange peel), and Fruit Phenolic Blend (organic whole orange from Uncle Matt’s Organic, organic cranberry and organic blueberry).",
                                                         "footer": "Helps support the immune system",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw2e724b6f/VITAMIN_C/W1013/10132/10132.png?sw=1000",
@@ -414,7 +486,7 @@ const immuneRich = {
                                                  },
                                                  {
                                                         "title": "Daily C-Protect Nutrient Booster Powder™",
-                                                        "description": "Nourish your immune system, naturally (and yummily)! MegaFood® Daily C-Protect Nutrient Booster Powder™ combines FoodState® Vitamin C with farm-fresh super fruits, including organic blueberries, organic cranberries, and organic whole orange from Uncle Matt’s Organic, for a powerful delivery of phytonutrients*. We also include our Immune-Balancing Blend with organic astragalus and organic schisandra berry*. Mix with your favorite juice or smoothie, sip, and enjoy!",
+                                                        "description": "Nourish your immune system, naturally (and yummily)! MegaFood® Daily C-Protect Nutrient Booster Powder™ combines FoodState® Vitamin C with farm-fresh super fruits, including organic blueberries, organic cranberries, and organic whole orange from Uncle Matt’s Organic, for a powerful delivery of phytonutrients  . We also include our Immune-Balancing Blend with organic astragalus and organic schisandra berry  . Mix with your favorite juice or smoothie, sip, and enjoy!",
                                                         "footer": "Provides your body with the nourishment it needs to support your natural immune defenses",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw645ba178/VITAMIN_C/W1014/60137/60137.png?sw=1000",
@@ -426,7 +498,7 @@ const immuneRich = {
                                                  },
                                                  {
                                                         "title": "Un-Stress®",
-                                                        "description": "Take a deep breath...and replenish key nutrients that are easily depleted during times of emotional, mental and physical stress with MegaFood® Un-Stress®. FoodState Nutrients™, including B vitamins, vitamin C and zinc, have your immune system’s back*, while our Soothing Herbal Blend delivers supportive organic herbs, including organic ashwagandha, organic chamomile flower and organic astragalus root",
+                                                        "description": "Take a deep breath...and replenish key nutrients that are easily depleted during times of emotional, mental and physical stress with MegaFood® Un-Stress®. FoodState Nutrients™, including B vitamins, vitamin C and zinc, have your immune system’s back  , while our Soothing Herbal Blend delivers supportive organic herbs, including organic ashwagandha, organic chamomile flower and organic astragalus root",
                                                         "footer": "Helps ward off fatigue",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw0fc4ea69/MOOD/W1060/10157/10157.png?sw=1000",
@@ -438,7 +510,7 @@ const immuneRich = {
                                                  },
                                                  {
                                                         "title": "Turmeric Strength™ for Liver",
-                                                        "description": "Go ahead, show your liver some love! MegaFood® Turmeric Strength™ for Liver combines a powerful array of healthful compounds, whole foods and extracts that support an already healthy inflammation response of the liver*, and features real, farm fresh turmeric root from Kauai Organic Farms to deliver 300 mg of curcumin per serving*. We also added BioPerine®, a patented black pepper extract that helps support the absorption of curcumin (that otherwise on its own can be hard for the body to assimilate)*, and milk thistle seed, rich in silymarin and shown to promote liver health*, while schisandra berry provides added antioxidants",
+                                                        "description": "Go ahead, show your liver some love! MegaFood® Turmeric Strength™ for Liver combines a powerful array of healthful compounds, whole foods and extracts that support an already healthy inflammation response of the liver  , and features real, farm fresh turmeric root from Kauai Organic Farms to deliver 300 mg of curcumin per serving  . We also added BioPerine®, a patented black pepper extract that helps support the absorption of curcumin (that otherwise on its own can be hard for the body to assimilate)  , and milk thistle seed, rich in silymarin and shown to promote liver health  , while schisandra berry provides added antioxidants",
                                                         "footer": "Delivers whole food and concentrated herbal antioxidant compounds known to support an already healthy inflammation response",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw4006f980/INFLAMMATION/W1057/10306/10306.png?sw=1000",
@@ -450,7 +522,7 @@ const immuneRich = {
                                                  },
                                                  {
                                                         "title": "Ultra C-400 mg",
-                                                        "description": "Give us a ‘C’! Our Ultra-C 400 provides FoodState® Vitamin C delivered with real, hand-picked organic oranges from Uncle Matt’s Organic for ultimate immune support*. You’ll also find our Nourishing Food and Herb Blend for an added spectrum of antioxidants",
+                                                        "description": "Give us a ‘C’! Our Ultra-C 400 provides FoodState® Vitamin C delivered with real, hand-picked organic oranges from Uncle Matt’s Organic for ultimate immune support  . You’ll also find our Nourishing Food and Herb Blend for an added spectrum of antioxidants",
                                                         "footer": "Promotes immune & cellular health",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwa7e65a8f/VITAMIN_C/W1059/10184/10184.png?sw=1000",
@@ -462,7 +534,7 @@ const immuneRich = {
                                                  },
                                                  {
                                                         "title": "Gummy D3 (1000 IU) Wellness - Mixed Fruit",
-                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds*—no artificial or added colors, flavors or preservatives, period—plus they’re easy to chew and swallow. Fresh-picked Florida oranges, Wisconsin cranberries, Quebec blueberries and Kauai ginger root—a bountiful blend!—give our gummies a real boost in flavor and color, while 1000 IU (25 mcg) of FoodState® Vitamin D supports bone, muscle and immune health",
+                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds  —no artificial or added colors, flavors or preservatives, period—plus they’re easy to chew and swallow. Fresh-picked Florida oranges, Wisconsin cranberries, Quebec blueberries and Kauai ginger root—a bountiful blend!—give our gummies a real boost in flavor and color, while 1000 IU (25 mcg) of FoodState® Vitamin D supports bone, muscle and immune health",
                                                         "footer": "Supports bone, muscle and immune health",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw5cfd5f9d/VITAMIN_D/W1026/10348/10348.png?sw=1000",
@@ -477,12 +549,9 @@ const immuneRich = {
                             }
                      ]
               }
-       }
 };
 
 const kidsHealthRich = {
-       "conversationToken": "[\"actions_capability_screen_output\"]",
-       "finalResponse": {
               "richResponse": {
                      "items": [
                             {
@@ -495,7 +564,7 @@ const kidsHealthRich = {
                                           "items": [
                                                  {
                                                         "title": "Kids One Daily",
-                                                        "description": "Mom formulated, kid approved! MegaFood® Kids One Daily is a comprehensive multi designed for kids aged 5 and older, and is free from added sweeteners, flavorings and food colorings. Each easy-to-swallow, easy-to-digest, once-daily mini tablet provides 24 FoodState Nutrients™ to support healthy growth and development, and can be taken anytime of day, even on an empty stomach*. Our FoodState® Fruit Phenolic Blend provides additional antioxidants",
+                                                        "description": "Mom formulated, kid approved! MegaFood® Kids One Daily is a comprehensive multi designed for kids aged 5 and older, and is free from added sweeteners, flavorings and food colorings. Each easy-to-swallow, easy-to-digest, once-daily mini tablet provides 24 FoodState Nutrients™ to support healthy growth and development, and can be taken anytime of day, even on an empty stomach  . Our FoodState® Fruit Phenolic Blend provides additional antioxidants",
                                                         "footer": "Supports optimal health and wellbeing",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwb2d51ceb/KIDS/W1032/10179/10179.png?sw=1000",
@@ -507,7 +576,7 @@ const kidsHealthRich = {
                                                  },
                                                  {
                                                         "title": "Kids N’ Us™ MegaFlora®",
-                                                        "description": "Intestinal health is vital to overall health—even in little ones!* That’s why we created MegaFood® Kids N’ Us™ MegaFlora® with kids aged 5 and up in mind. Designed to maintain intestinal health and bowel regularity*, it provides 5 billion active bacteria across 14 unique probiotic strains that are naturally found in the digestive system, and helps to restore and maintain the balance of healthy probiotics*. We recommend storing yours in the fridge or freezer, and taking one capsule daily with a meal.",
+                                                        "description": "Intestinal health is vital to overall health—even in little ones!   That’s why we created MegaFood® Kids N’ Us™ MegaFlora® with kids aged 5 and up in mind. Designed to maintain intestinal health and bowel regularity  , it provides 5 billion active bacteria across 14 unique probiotic strains that are naturally found in the digestive system, and helps to restore and maintain the balance of healthy probiotics  . We recommend storing yours in the fridge or freezer, and taking one capsule daily with a meal.",
                                                         "footer": "Supports intestinal health and immunity",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwfdb4cb01/PROBIOTICS/W1031/10214/10214.png?sw=1000",
@@ -519,7 +588,7 @@ const kidsHealthRich = {
                                                  },
                                                  {
                                                         "title": "Kids B Complex",
-                                                        "description": "Growing kids have unique nutritional needs. That’s why MegaFood® Kids B Complex provides a balanced complex of all FoodState® B vitamins, plus zinc, choline and inositol to help support energy production and a healthy nervous system*. We include L-theanine and bacopa, a traditional Ayurvedic herb, to promote cognitive function*. These easy-to-swallow mini tablets can be taken any time of day, even on an empty stomach",
+                                                        "description": "Growing kids have unique nutritional needs. That’s why MegaFood® Kids B Complex provides a balanced complex of all FoodState® B vitamins, plus zinc, choline and inositol to help support energy production and a healthy nervous system  . We include L-theanine and bacopa, a traditional Ayurvedic herb, to promote cognitive function  . These easy-to-swallow mini tablets can be taken any time of day, even on an empty stomach",
                                                         "footer": "Promotes cognitive focus and a sense of calm",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw3567035f/KIDS/W1027/10275/10275.png?sw=1000",
@@ -531,7 +600,7 @@ const kidsHealthRich = {
                                                  },
                                                  {
                                                         "title": "Kids Daily Multi Nutrient Booster Powder™",
-                                                        "description": "MegaFood® Kids Daily Multi Nutrient Booster Powder™ is designed with growing kids aged 5 and up in mind. Its combination of FoodState® Vitamins and Minerals, paired with farm-fresh fruits and turmeric, provides balanced nutritional support and protective antioxidants*. Our easy to blend, shake (and sip!) powder contains no added fillers, sweeteners, flavors, colors or preservatives",
+                                                        "description": "MegaFood® Kids Daily Multi Nutrient Booster Powder™ is designed with growing kids aged 5 and up in mind. Its combination of FoodState® Vitamins and Minerals, paired with farm-fresh fruits and turmeric, provides balanced nutritional support and protective antioxidants  . Our easy to blend, shake (and sip!) powder contains no added fillers, sweeteners, flavors, colors or preservatives",
                                                         "footer": "Promotes wellbeing and healthy development",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwfa814cae/BOOSTER/W1030/W1030.png?sw=1000",
@@ -543,7 +612,7 @@ const kidsHealthRich = {
                                                  },
                                                  {
                                                         "title": "Alpha-Teen™",
-                                                        "description": "Healthy teens need specific levels of vitamins and minerals to optimize their wellbeing*. That’s why MegaFood® Alpha-Teen™ is formulated specifically for (super!) kids aged 13 to 18: with 1000 IU (25 mcg) of vitamin D, 5 mg of FoodState® Iron, plus beta carotene and vitamins C and E. Three daily tablets help support healthy bones, mood and immune function*. (Now helping with their calculus homework: that’s all you.)",
+                                                        "description": "Healthy teens need specific levels of vitamins and minerals to optimize their wellbeing  . That’s why MegaFood® Alpha-Teen™ is formulated specifically for (super!) kids aged 13 to 18: with 1000 IU (25 mcg) of vitamin D, 5 mg of FoodState® Iron, plus beta carotene and vitamins C and E. Three daily tablets help support healthy bones, mood and immune function  . (Now helping with their calculus homework: that’s all you.)",
                                                         "footer": "Supports the optimal health and wellbeing of teens aged 13 to 18",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw7472a154/KIDS/W1003/10154/10154.png?sw=1000",
@@ -555,7 +624,7 @@ const kidsHealthRich = {
                                                  },
                                                  {
                                                         "title": "Kids Daily B-Centered™ Nutrient Booster Powder™",
-                                                        "description": "Growing kids have unique nutritional needs. That’s why MegaFood® Kid’s Daily B-Centered Nutrient Booster Powder™ provides a balanced complex of FoodState® B vitamins, chamomile and lemon balm to help provide a sense of calm*, and bacopa, a traditional Ayurvedic herb used for cognitive function*. All in an easy to blend, shake (and sip!) powder with no added sweeteners, flavorings or preservatives.",
+                                                        "description": "Growing kids have unique nutritional needs. That’s why MegaFood® Kid’s Daily B-Centered Nutrient Booster Powder™ provides a balanced complex of FoodState® B vitamins, chamomile and lemon balm to help provide a sense of calm  , and bacopa, a traditional Ayurvedic herb used for cognitive function  . All in an easy to blend, shake (and sip!) powder with no added sweeteners, flavorings or preservatives.",
                                                         "footer": "Supports energy, focus and sense of calm",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw87ad9c18/BOOSTER/W1028/W1028.png?sw=1000",
@@ -567,7 +636,7 @@ const kidsHealthRich = {
                                                  },
                                                  {
                                                         "title": "Kids Daily Immune Nutrient Booster Powder™",
-                                                        "description": "MegaFood® Kids Daily Immune Nutrient Booster Powder™ promotes a healthy immune response (with organic astragalus, echinacea and FoodState® Elderberry, for optimal wellness year round). Our easy to blend, shake (and sip!) powder contains a combination of FoodState Nutrients™, whole herbs and farm-fresh foods to enhance your child’s vitality and sense of wellbeing*—without added fillers, sweeteners, flavorings or preservatives. Organic orange from Uncle Matt’s Organic, along with organic blueberry and organic cranberry, provide deeply-pigmented phytonutrients for additional antioxidant protection.",
+                                                        "description": "MegaFood® Kids Daily Immune Nutrient Booster Powder™ promotes a healthy immune response (with organic astragalus, echinacea and FoodState® Elderberry, for optimal wellness year round). Our easy to blend, shake (and sip!) powder contains a combination of FoodState Nutrients™, whole herbs and farm-fresh foods to enhance your child’s vitality and sense of wellbeing  —without added fillers, sweeteners, flavorings or preservatives. Organic orange from Uncle Matt’s Organic, along with organic blueberry and organic cranberry, provide deeply-pigmented phytonutrients for additional antioxidant protection.",
                                                         "footer": "Promotes a healthy immune response",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwaca747e6/BOOSTER/W1029/W1029.png?sw=1000",
@@ -582,12 +651,9 @@ const kidsHealthRich = {
                             }
                      ]
               }
-       }
 };
 
 const prenatalPostnatalRich ={
-       "conversationToken": "[\"actions_capability_screen_output\"]",
-       "finalResponse": {
               "richResponse": {
                      "items": [
                             {
@@ -600,7 +666,7 @@ const prenatalPostnatalRich ={
                                           "items": [
                                                  {
                                                         "title": "Baby & Me™",
-                                                        "description": "Mamas-to-be (and lactating mamas), we’ve got you and your bump covered! MegaFood® Baby & Me™ is our original pre- and post-natal supplement, created with pregnancy-specific FoodState Nutrients™ like vitamins B6, D and folic acid, to support the health of moms like you and your developing children*. We also included a Nourishing Food and Herb Blend. Best of all? Baby & Me can be taken any time of the day, even on an empty stomach.",
+                                                        "description": "Mamas-to-be (and lactating mamas), we’ve got you and your bump covered! MegaFood® Baby & Me™ is our original pre- and post-natal supplement, created with pregnancy-specific FoodState Nutrients™ like vitamins B6, D and folic acid, to support the health of moms like you and your developing children  . We also included a Nourishing Food and Herb Blend. Best of all? Baby & Me can be taken any time of the day, even on an empty stomach.",
                                                         "footer": "Supports the health of mother and developing child",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwcd40f62a/WOMENS/W1004/10121/10121.png?sw=1000",
@@ -612,7 +678,7 @@ const prenatalPostnatalRich ={
                                                  },
                                                  {
                                                         "title": "Baby & Me 2™",
-                                                        "description": "You’ve got a lot to think about during your pregnancy. Your nutrition? Let us help with that! MegaFood® Baby & Me 2™ combines optimal levels of iron, methylated folate and B12, B6, vitamin D and choline for healthy mood balance for moms-to-be*, and is formulated by award-winning integrative medical physician, Tieraona Low Dog, M.D. (We made it without calcium or magnesium, so if those are areas of concern for you, we suggest also trying MegaFood®Bone Health.)",
+                                                        "description": "You’ve got a lot to think about during your pregnancy. Your nutrition? Let us help with that! MegaFood® Baby & Me 2™ combines optimal levels of iron, methylated folate and B12, B6, vitamin D and choline for healthy mood balance for moms-to-be  , and is formulated by award-winning integrative medical physician, Tieraona Low Dog, M.D. (We made it without calcium or magnesium, so if those are areas of concern for you, we suggest also trying MegaFood®Bone Health.)",
                                                         "footer": "Supports the health of mother and developing child",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwbcfb0a7d/WOMENS/W1005/10314/10314.png?sw=1000",
@@ -624,7 +690,7 @@ const prenatalPostnatalRich ={
                                                  },
                                                  {
                                                         "title": "MegaFlora® for Baby & Me",
-                                                        "description": "Improved health for you and for baby*! Probiotics are a top recommended supplement for expectant moms! MegaFlora® for Baby & Me™ contains a broad spectrum of our proprietary blend of 14 unique strains of 20 billion probiotics, FoodState® Ginger to soothe upset tummies and support healthy digestive function*, and prebiotics, to promote the health and wellbeing of pregnant and breastfeeding women*. Probiotics support nutrient absorption, and studies have shown that intake of Lactobacillus rhamnosus (HN001) during the last trimester and early breastfeeding supports the child’s developing immune system.* All MegaFlora products are tested to be free of gluten, dairy and soy. We recommend storing your MegaFlora in the fridge or freezer, and taking it once daily with a meal.",
+                                                        "description": "Improved health for you and for baby  ! Probiotics are a top recommended supplement for expectant moms! MegaFlora® for Baby & Me™ contains a broad spectrum of our proprietary blend of 14 unique strains of 20 billion probiotics, FoodState® Ginger to soothe upset tummies and support healthy digestive function  , and prebiotics, to promote the health and wellbeing of pregnant and breastfeeding women  . Probiotics support nutrient absorption, and studies have shown that intake of Lactobacillus rhamnosus (HN001) during the last trimester and early breastfeeding supports the child’s developing immune system.   All MegaFlora products are tested to be free of gluten, dairy and soy. We recommend storing your MegaFlora in the fridge or freezer, and taking it once daily with a meal.",
                                                         "footer": "Supports the immune health of a pregnant mother and developing baby",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw8587c362/PROBIOTICS/W1036/10027/10027.png?sw=1000",
@@ -639,13 +705,10 @@ const prenatalPostnatalRich ={
                             }
                      ]
               }
-       }
 };
 
 
 const sportRich = {
-       "conversationToken": "[\"actions_capability_screen_output\"]",
-       "finalResponse": {
               "richResponse": {
                      "items": [
                             {
@@ -658,7 +721,7 @@ const sportRich = {
                                           "items": [
                                                  {
                                                         "title": "Daily Turmeric Nutrient Booster Powder™",
-                                                        "description": "Work out—and bounce back!—with MegaFood® Daily Turmeric Booster Powder™. It combines a protective, restorative combination of whole foods, herbs and extracts, including FoodState® Vitamin C and three powerful blends: our Whole Body Recovery Blend (replenishing turmeric, holy basil and BioPerine® black pepper extract), Harvest Fruit Blend (health-promoting tart cherry, black raspberry, wild blueberry, and cranberry extracts), and Fruit Phenolic Blend (organic whole orange from Uncle Matt’s Organic, plus blueberry and cranberry for an array of antioxidants)*. Mix with your favorite juice or smoothie, sip, and enjoy!",
+                                                        "description": "Work out—and bounce back!—with MegaFood® Daily Turmeric Booster Powder™. It combines a protective, restorative combination of whole foods, herbs and extracts, including FoodState® Vitamin C and three powerful blends: our Whole Body Recovery Blend (replenishing turmeric, holy basil and BioPerine® black pepper extract), Harvest Fruit Blend (health-promoting tart cherry, black raspberry, wild blueberry, and cranberry extracts), and Fruit Phenolic Blend (organic whole orange from Uncle Matt’s Organic, plus blueberry and cranberry for an array of antioxidants)  . Mix with your favorite juice or smoothie, sip, and enjoy!",
                                                         "footer": "Designed to help you bounce back from your daily workout",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwb984168e/BOOSTER/W1019/W1019.png?sw=1000",
@@ -670,7 +733,7 @@ const sportRich = {
                                                  },
                                                  {
                                                         "title": "Turmeric Strength™ for Whole Body",
-                                                        "description": "Where do we start? MegaFood® Turmeric Strength™ for Whole Body combines a powerful array of healthful compounds, whole foods and extracts that support a healthy inflammation response*, and features real, farm fresh turmeric root from Kauai Organic Farms and pure turmeric extract to deliver 481 mg of curcumin per serving*. We also added BioPerine®, a patented black pepper extract that helps support the absorption of curcumin (that otherwise on its own can be hard for the body to assimilate), while cherries and berries provide added antioxidants",
+                                                        "description": "Where do we start? MegaFood® Turmeric Strength™ for Whole Body combines a powerful array of healthful compounds, whole foods and extracts that support a healthy inflammation response  , and features real, farm fresh turmeric root from Kauai Organic Farms and pure turmeric extract to deliver 481 mg of curcumin per serving  . We also added BioPerine®, a patented black pepper extract that helps support the absorption of curcumin (that otherwise on its own can be hard for the body to assimilate), while cherries and berries provide added antioxidants",
                                                         "footer": "Delivers whole food and concentrated herbal antioxidant compounds known to support an already healthy inflammation response",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw548feab9/INFLAMMATION/W1058/10006/10006.png?sw=1000",
@@ -682,7 +745,7 @@ const sportRich = {
                                                  },
                                                  {
                                                         "title": "Gummy B12 Energy - Ginger",
-                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds*—no artificial or added colors, flavors or preservatives, period. These Ginger B12 gummies deliver a unique and yummy ginger root zing from Kauai Organic Farms. Not too spicy—just right! Plus, B12 helps support cellular energy levels and production",
+                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds  —no artificial or added colors, flavors or preservatives, period. These Ginger B12 gummies deliver a unique and yummy ginger root zing from Kauai Organic Farms. Not too spicy—just right! Plus, B12 helps support cellular energy levels and production",
                                                         "footer": "Supports cellular energy production",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw63341d5c/VITAMIN_B/W1023/10346/10346.png?sw=1000",
@@ -694,7 +757,7 @@ const sportRich = {
                                                  },
                                                  {
                                                         "title": "Turmeric Strength™ for Liver",
-                                                        "description": "Go ahead, show your liver some love! MegaFood® Turmeric Strength™ for Liver combines a powerful array of healthful compounds, whole foods and extracts that support an already healthy inflammation response of the liver*, and features real, farm fresh turmeric root from Kauai Organic Farms to deliver 300 mg of curcumin per serving*. We also added BioPerine®, a patented black pepper extract that helps support the absorption of curcumin (that otherwise on its own can be hard for the body to assimilate)*, and milk thistle seed, rich in silymarin and shown to promote liver health*, while schisandra berry provides added antioxidants",
+                                                        "description": "Go ahead, show your liver some love! MegaFood® Turmeric Strength™ for Liver combines a powerful array of healthful compounds, whole foods and extracts that support an already healthy inflammation response of the liver  , and features real, farm fresh turmeric root from Kauai Organic Farms to deliver 300 mg of curcumin per serving  . We also added BioPerine®, a patented black pepper extract that helps support the absorption of curcumin (that otherwise on its own can be hard for the body to assimilate)  , and milk thistle seed, rich in silymarin and shown to promote liver health  , while schisandra berry provides added antioxidants",
                                                         "footer": "Delivers whole food and concentrated herbal antioxidant compounds known to support an already healthy inflammation response",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw4006f980/INFLAMMATION/W1057/10306/10306.png?sw=1000",
@@ -706,7 +769,7 @@ const sportRich = {
                                                  },
                                                  {
                                                         "title": "Daily Energy Nutrient Booster Powder™",
-                                                        "description": "We designed MegaFood® Daily Energy Nutrient Booster Powder™ to help sustain physical and mental stamina*. It combines FoodState® B12, essential for healthy red blood cell formation, with chromium, which supports a healthy metabolism*, along with a powerful blend of herbs and roots—ashwagandha, eleuthero, beet root, and green tea leaf extract—for added phytochemicals and support during times of stress*. Mix with your favorite juice or smoothie, sip, and enjoy!",
+                                                        "description": "We designed MegaFood® Daily Energy Nutrient Booster Powder™ to help sustain physical and mental stamina  . It combines FoodState® B12, essential for healthy red blood cell formation, with chromium, which supports a healthy metabolism  , along with a powerful blend of herbs and roots—ashwagandha, eleuthero, beet root, and green tea leaf extract—for added phytochemicals and support during times of stress  . Mix with your favorite juice or smoothie, sip, and enjoy!",
                                                         "footer": "Designed to help sustain the body and mind",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw0935e9da/BOOSTER/W1015/60136/60136.png?sw=1000",
@@ -718,7 +781,7 @@ const sportRich = {
                                                  },
                                                  {
                                                         "title": "Ultra C-400 mg",
-                                                        "description": "Give us a ‘C’! Our Ultra-C 400 provides FoodState® Vitamin C delivered with real, hand-picked organic oranges from Uncle Matt’s Organic for ultimate immune support*. You’ll also find our Nourishing Food and Herb Blend for an added spectrum of antioxidants",
+                                                        "description": "Give us a ‘C’! Our Ultra-C 400 provides FoodState® Vitamin C delivered with real, hand-picked organic oranges from Uncle Matt’s Organic for ultimate immune support  . You’ll also find our Nourishing Food and Herb Blend for an added spectrum of antioxidants",
                                                         "footer": "Promotes immune & cellular health",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwa7e65a8f/VITAMIN_C/W1059/10184/10184.png?sw=1000",
@@ -730,7 +793,7 @@ const sportRich = {
                                                  },
                                                  {
                                                         "title": "Gummy B12 Energy - Cranberry",
-                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds*—no artificial or added colors, flavors or preservatives, period—plus they’re easy to chew and swallow. 24 mcg of B12 help support cellular energy levels and production; tart, farm-fresh cranberry from James Lake Farms in Three Lakes, Wisconsin give our gummies real berry flavor (and color!)",
+                                                        "description": "Our MegaFood® Gummies are made with real, whole foods sourced from farm fresh partners to deliver a range of health-promoting compounds  —no artificial or added colors, flavors or preservatives, period—plus they’re easy to chew and swallow. 24 mcg of B12 help support cellular energy levels and production; tart, farm-fresh cranberry from James Lake Farms in Three Lakes, Wisconsin give our gummies real berry flavor (and color!)",
                                                         "footer": "Supports cellular energy production",
                                                         "image": {
                                                                "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwf50fa9a6/VITAMIN_B/W1024/10347/10347.png?sw=1000",
@@ -745,7 +808,6 @@ const sportRich = {
                             }
                      ]
               }
-       }
 };
 
 exports.getResponses = (intent)=>{
@@ -755,6 +817,9 @@ exports.getResponses = (intent)=>{
        }
        if(intent === 'beautyAndSkinRich'){
               payload = beautyAndSkinRich;
+       }
+       if(intent === 'boneHealthRich'){
+              payload = boneHealthRich;
        }
        return payload;
 };
