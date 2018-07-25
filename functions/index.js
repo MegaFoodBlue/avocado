@@ -43,10 +43,17 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
        intentMap.set('digestive-previous', require('./intent-handlers/digestive-previous'));
 
        intentMap.set('healthy-aging', require('./intent-handlers/healthy-aging'));
+       intentMap.set('healthy-aging-next', require('./intent-handlers/healthy-aging-next'));
+       intentMap.set('healthy-aging-previous', require('./intent-handlers/healthy-aging-previous'));
+
+       intentMap.set('immune', require('./intent-handlers/immune'));
+       intentMap.set('immune-next', require('./intent-handlers/immune-next'));
+       intentMap.set('immune-previous', require('./intent-handlers/immune-previous'));
 
        intentMap.set('energy', require('./intent-handlers/energy'));
        intentMap.set('energy-next', require('./intent-handlers/energy-next'));
        intentMap.set('energy-previous', require('./intent-handlers/energy-previous'));
+
        intentMap.set('default-supplements', require('./intent-handlers/default-supplements'));
 
        agent.handleRequest(intentMap);
