@@ -960,6 +960,213 @@ const healthyAging = {
                      ]
               }
 };
+
+const mensHealth = {
+              "richResponse": {
+                     "items": [
+                            {
+                                   "simpleResponse": {
+                                          "textToSpeech": "Supplements specifically formulated to suit men’s nutritional needs and challenges throughout life. Our men’s multivitamin and mineral formulas are packed with fresh, whole food nourishment to power your day."
+                                   }
+                            },
+                            {
+                                   "carouselBrowse": {
+                                          "items": [
+                                                 {
+                                                        "title": "Healthy Man Bundle",
+                                                        "description": "Guys, we’ve got your health on our mind. That’s why we created our Healthy Man bundle just for you: with a specific combo of gender-targeted supplements including an easy-to-digest multivitamin formulated by award-winning integrative physician, Tieraona Low Dog, M.D.; MegaFlora®, our original probiotic, to help keep your gut health in check; and Turmeric Strength for Whole Body, which provides a healthy inflammatory response combined together to help you stay strong and focused throughout the day.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw665ee901/MENS/WB3005/WB3005.png?sw=1000",
+                                                               "accessibilityText": "Healthy Man Bundle"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-mens-health/healthy-man-bundle-WB3005.html?cgid=vitamins-mens-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Multi for Men",
+                                                        "description": "MegaFood® Multi for Men is formulated by award-winning integrative medical physician, Tieraona Low Dog, M.D., specifically for men who want a multi without iron, magnesium or calcium that supports their optimal health and wellbeing. Our twice-daily tablets are gentle enough to be taken on an empty stomach, and are crafted with a host of supportive FoodState® Vitamins and Minerals, including B vitamins to support healthy energy function and nervous system health, choline for healthy memory and cognitive function, iodine, and methylated folate and B12, plus the active form of B6, P5P.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwd71340f7/MENS/W1042/10319/10319.png?sw=1000",
+                                                               "accessibilityText": "Multi for Men"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-mens-health/multi-for-men-W1042.html?cgid=vitamins-mens-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Prostate Strength",
+                                                        "description": "MegaFood® Prostate Strength™ supports healthy prostate function through its potent blend of FoodState Nutrients™, herbal extracts and superfoods. Saw palmetto (45% total fatty acids) and Graminex® flower pollen extract help maintain an already healthy urinary flow, while tomato, cranberry and pumpkin seed extract provide naturally-occurring phytonutrients and are traditionally used to nourish the prostate and urinary tract. Can be taken anytime of day, even on an empty stomach.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwbc134b12/MEN_REPRODUCTIVE/W1050/10002/10002.png?sw=1000",
+                                                               "accessibilityText": "Prostate Strength"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-mens-health/prostate-strength-W1050.html?cgid=vitamins-mens-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Men’s One Daily",
+                                                        "description": "MegaFood® Men’s One Daily is specifically formulated without iron to support the health and wellbeing of men. (Iron is not recommended for men unless specifically directed by their healthcare practitioner).  Our convenient, once-daily multi nourishes the whole body and is gentle enough to take on an empty stomach...  FoodState® B vitamins assist with already healthy cardiovascular function, healthy energy production and nervous system health, while 400 IU (10 mcg) of FoodState® Vitamin D supports already healthy bones and mood. Zinc, an essential mineral, supports prostate health.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw7a84a4b1/MENS/W1040/10106/10106.png?sw=1000",
+                                                               "accessibilityText": "Men’s One Daily"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-mens-health/mens-one-daily-W1040.html?cgid=vitamins-mens-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Daily Maca Plus for Men Nutrient Booster Powder",
+                                                        "description": "MegaFood® Daily Maca Plus for Men Nutrient Booster Powder™ is designed to promote overall health and vitality in men. It combines maca, a nourishing superfood found in the mountains of Peru, with herbs traditionally used to support male physiological function.  Mix with your favorite juice or smoothie, sip, and enjoy!",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwa86bb19b/BOOSTER/W1016/W1016.png?sw=1000",
+                                                               "accessibilityText": "Daily Maca Plus for Men Nutrient Booster Powder"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-mens-health/daily-maca-plus-for-men-nutrient-booster-powder-W1016.html?cgid=vitamins-mens-health"
+                                                        }
+                                                 }
+                                          ]
+                                   }
+                            }
+                     ]
+              }
+};
+
+const womensHealth = {
+              "richResponse": {
+                     "items": [
+                            {
+                                   "simpleResponse": {
+                                          "textToSpeech": "You're passionate about staying happy and healthy. We’re passionate about making the very best vitamins to support your health. Our farm-fresh supplements are made with real, nutritious, whole foods, and optimally paired with nutrients using our very own Slo-Food Process™."
+                                   }
+                            },
+                            {
+                                   "carouselBrowse": {
+                                          "items": [
+                                                 {
+                                                        "title": "Blood Builder",
+                                                        "description": "MegaFood® Blood Builder® is one of our top-selling products for a reason: it’s clinically proven to increase iron levels and reduce fatigue without common gastrointestinal side effects... We make it with nourishing, whole foods, like beets from Stahlbush® Island Farms and organic oranges from Uncle Matt’s Organic, plus folic acid and B12 for healthy red blood cell production, and vitamin C to support iron absorption. Oh, and did we tell you it’s safe to take on an empty stomach?",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw4e51bdae/MINERALS/W1008/10170/10170.png?sw=1000",
+                                                               "accessibilityText": "Blood Builder"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-womens-health/blood-builder-W1008.html?cgid=vitamins-womens-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Women’s One Daily",
+                                                        "description": "You rule the world. Shouldn’t your multi do the same? MegaFood® Women’s One Daily delivers FoodState® Vitamins C, D and folic acid that your body needs, plus 9 mg of FoodState® Iron to replenish levels lost during menstruation, trace minerals, and a Nourishing Food and Herb Blend for energy and nervous system health. All in a once-a-day tablet that’s easy to digest, even on an empty stomach.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwea5f5aef/WOMENS/W1067/10103/10103.png?sw=1000",
+                                                               "accessibilityText": "Women’s One Daily"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-womens-health/womens-one-daily-W1067.html?cgid=vitamins-womens-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Multi for Women",
+                                                        "description": "MegaFood® Multi for Women is formulated by award-winning integrative medical physician, Tieraona Low Dog, M.D., specifically for women who seek optimal health and wellbeing. Our twice-daily tablets can be taken any time throughout the day, and are crafted with a blend of vitamins and minerals that support a woman’s unique physiological needs, including normal hormonal fluctuations. It includes 15 mg of FoodState® Iron to replenish levels lost during menstruation, a full spectrum of FoodState® B vitamins to support healthy energy production and nervous system health, 800 IU (20 mcg) of vitamin D to support already healthy bones and mood , plus biotin, beta carotene and vitamins A, C and E (note: Multi for Women is formulated without calcium and magnesium, and so we suggest you also consider supplementing with MegaFood® Bone Health).",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw99428c3b/WOMENS/W1045/10323/10323.png?sw=1000",
+                                                               "accessibilityText": "Multi for Women"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-womens-health/multi-for-women-W1045.html?cgid=vitamins-womens-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Healthy Woman Bundle",
+                                                        "description": "Ladies, we’ve got your health on our mind. That’s why we created our Healthy Woman bundle just for you: with a specific combo of gender-targeted supplements—including an easy-to-digest multivitamin formulated by award-winning integrative physician, Tieraona Low Dog, M.D.; Bone Health; and MegaFlora®, our original probiotic, to help keep your gut health in check, combined together to help you keep up with the hustle and bustle of everyday living.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw9b3b0468/WOMENS/WB3002/WB3002.png?sw=1000",
+                                                               "accessibilityText": "Healthy Woman Bundle"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-womens-health/healthy-woman-bundle-WB3002.html?cgid=vitamins-womens-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Women's One Daily - CA",
+                                                        "description": "Our Women’s One Daily California Blend provides ashwagandha, schisandra, cranberry and chaste tree berry, plus an additional 800 IU (20 mcg) of vitamin D, to help maintain already healthy mood and bones.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw9065068e/WOMENS/W1066/10283/10283.png?sw=1000",
+                                                               "accessibilityText": "Women's One Daily - CA"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-womens-health/womens-one-daily---ca-W1066.html?cgid=vitamins-womens-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Pure Cranberry",
+                                                        "description": "As close to the bog as it gets! MegaFood® Pure Cranberry naturally supports immune and urinary tract health. It uses farm-fresh cranberries from our family farm partner, James Lake Farms, that are carefully milled and dried using our Slo-Food Process™ to deliver the authentic nourishment of freshly-harvested cranberries in each 500 mg capsule. It can be taken any time of day even on an empty stomach.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw67417fd2/SINGLE/W1051/10279/10279.png?sw=1000",
+                                                               "accessibilityText": "Pure Cranberry"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-womens-health/pure-cranberry-W1051.html?cgid=vitamins-womens-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Blood Builder® Minis",
+                                                        "description": "MegaFood® Blood Builder® Minis takes everything you love about our original Blood Builder and delivers it to you in a convenient, twice-daily tablet.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw40af8513/MINERALS/W1009/10337/10337.png?sw=1000",
+                                                               "accessibilityText": "Blood Builder® Minis"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-womens-health/blood-builder-minis-W1009.html?cgid=vitamins-womens-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "MegaFlora® for Women",
+                                                        "description": "Ladies, your microbiome has special requirements thanks to female anatomy. That’s why we crafted a probiotic with you in mind: MegaFood® MegaFlora® for Women. It includes our proprietary MegaFlora blend of 14 unique strains of probiotics with 20 billion active bacteria that help restore and maintain the balance of healthy intestinal probiotics, plus higher counts of Lactobacillus rhamnosus (HN001) and Lactobacillus plantarum (LP115), shown to promote vaginal and urinary tract health. We even added nourishing prebiotic foods, like beet, burdock and dandelion roots. All MegaFlora products are tested free from gluten, dairy and soy. We recommend storing your MegaFlora in the fridge or freezer, and taking it twice daily anytime, with food.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dw746ea6dd/PROBIOTICS/W1038/10021/10021.png?sw=1000",
+                                                               "accessibilityText": "MegaFlora® for Women"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-womens-health/megaflora-for-women-W1038.html?cgid=vitamins-womens-health"
+                                                        }
+                                                 },
+                                                 {
+                                                        "title": "Bone Health",
+                                                        "description": "MegaFood® Bone Health aims to keep yours strong and healthy. We include optimal levels of vitamins and minerals—we’re talking 1000 IU (25 mcg) of vitamin D, 100 mg of vitamin C, 500 mg of calcium, and 300 mg of magnesium, plus vitamins K1 and K2—to support bone health and mood (formulated by award-winning integrative physician, Tieraona Low Dog, M.D.). Bone Health is gentle on the stomach, and best taken with food.",
+                                                        "footer": "This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.",
+                                                        "image": {
+                                                               "url": "https://www.megafood.com/dw/image/v2/BBZT_PRD/on/demandware.static/-/Sites-megafood-master/default/dwa4e3344b/MINERALS/W1010/10329/10329.png?sw=1000",
+                                                               "accessibilityText": "Bone Health"
+                                                        },
+                                                        "openUrlAction": {
+                                                               "url": "https://www.megafood.com/vitamins-health-needs-goals/vitamins-womens-health/bone-health-W1010.html?cgid=vitamins-womens-health"
+                                                        }
+                                                 }
+                                          ]
+                                   }
+                            }
+                     ]
+              }
+};
+
+
+
 /***
  * This function maps the intents to it's wellnes goals products and extracts parameters to filter results.
  * @param intent
@@ -1004,6 +1211,14 @@ exports.getResponses = (intent, params)=>{
        if(params.hasOwnProperty('user-gender')){
               console.log(params['user-gender']);
               payload.richResponse.items[1].carouselBrowse.items = filterParameter(items,'user-gender',params['user-gender']);
+       }
+       if(params.hasOwnProperty('age')){
+              if(params.age.amount < 40 && params['user-gender'] === 'male'){
+               payload = mensHealth;
+              }
+              if(params.age.amount < 40 && params['user-gender'] === 'female'){
+                     payload = womensHealth;
+              }
        }
 
        return payload;
