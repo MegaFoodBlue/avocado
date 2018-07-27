@@ -3,7 +3,6 @@
 
 const {Payload} = require('dialogflow-fulfillment');
 const rich = require('../lib/rich-responses');
-const admin = require('firebase-admin');
 
 function buildSingleResponse (products, index, conv){
        return new Promise((resolve,reject)=>{
@@ -36,101 +35,6 @@ function buildSingleResponse (products, index, conv){
               }
        });
 }
-
-function buildRichPayload (data, requestedInfo){
-       return {
-              expectUserResponse: true,
-              isSsml : false,
-              noInputPrompts : [],
-              richInitialPrompt: {
-                     'items': [
-                            {
-                                   "simpleResponse": {
-                                          "textToSpeech": data[requestedInfo]
-                                   }
-                            },
-                            {
-                                   "basicCard" : {
-                                          "title": data['Product Name'],
-                                          "subtitle": data['Main Claim'],
-                                          "formattedText": data[requestedInfo],
-                                          "image": {
-                                                 'url': {
-                                                        "url":data.image,
-                                                        "accessibilityText": data['Product Name']
-                                                 },
-                                                 "buttons": [
-                                                        {
-                                                               "title": "View on web",
-                                                               "openUrlAction": {
-                                                                      "url": data.web
-                                                               }
-                                                        }
-                                                 ]
-                                          }
-                                   }
-                            }
-                     ]
-              },
-       };
-
-}
-
-exports.initialFirebase = (agent)=>{
-       let conv = agent.conv();
-       let params = agent.parameters;
-       let products =  admin.database().ref('products');
-       let product = params.megafoodProduct;
-       let requestedInfo = params.productInfo;
-       let data = {};
-       const hasScreen = conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT'); // Determine surface screen capability.
-
-       products.child(product).once('value').then(snap => {
-              data = snap.val();
-              conv.ask('ok! let me get that for you!');
-              agent.add(conv);
-
-              if(conv.data.product === undefined){
-                     conv.data.product = data;
-              }
-
-              if (agent.requestSource === 'ACTIONS_ON_GOOGLE') {
-                     if(hasScreen){
-                            let payload = buildRichPayload(data,requestedInfo);
-                            console.log(JSON.stringify(payload,null,3));
-                            agent.add(new Payload('ACTIONS_ON_GOOGLE', payload));
-                     } if (!hasScreen){
-                            console.log('user does not have a screen');
-                            conv.close(data[requestedInfo]);
-                            agent.add(conv);
-                     }
-              } else {
-                     conv.close("Sorry, we don't support this platform at this time.");
-                     agent.add(conv); // Add Actions on Google library responses to your agent's response
-              }
-
-       }).catch(err=>{
-              console.error(err);
-       });
-};
-
-
-
-exports.next= (agent) => {
-
-       let conv = agent.conv();
-
-       conv.data.index ++;
-
-       if(conv.data.products !== undefined){
-              buildSingleResponse(conv.data.products, conv.data.index, conv)
-                     .then(function (conversation) {
-                            agent.add(conversation);
-                     });
-       }
-       console.log(conv.data.index);
-       console.log(conv.data.products);
-};
 
 exports.initial = (agent, category) => {
        let params = agent.parameters;
