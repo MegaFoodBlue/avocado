@@ -6,7 +6,8 @@
 
 const functions = require('firebase-functions');
 const {WebhookClient} = require('dialogflow-fulfillment');
-
+const admin = require('firebase-admin');
+admin.initializeApp();
 
 
 process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
@@ -61,6 +62,8 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
        intentMap.set('prenatal-postnatal', require('./intent-handlers/prenatal-postnatal'));
        intentMap.set('prenatal-postnatal-next', require('./intent-handlers/prenatal-postnatal-next'));
        intentMap.set('prenatal-postnatal-previous', require('./intent-handlers/prenatal-postnatal-previous'));
+
+       intentMap.set('product-info', require('./intent-handlers/product-info'));
 
        intentMap.set('sleep-stress', require('./intent-handlers/sleep-stress'));
        intentMap.set('sleep-stress-next', require('./intent-handlers/sleep-stress-next'));
