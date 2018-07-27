@@ -1209,7 +1209,7 @@ exports.getResponses = (intent, params)=>{
        let items = payload.richResponse.items[1].carouselBrowse.items;
 
        if(params.hasOwnProperty('user-gender')){
-              console.log(params['user-gender']);
+
               payload.richResponse.items[1].carouselBrowse.items = filterParameter(items,'user-gender',params['user-gender']);
        }
        if(params.hasOwnProperty('age')){

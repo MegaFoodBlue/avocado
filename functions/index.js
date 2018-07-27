@@ -13,8 +13,7 @@ admin.initializeApp();
 process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
-       const requestSource = (request.body.originalRequest);
-       console.log(requestSource);
+
        const agent = new WebhookClient({request, response});
 
 

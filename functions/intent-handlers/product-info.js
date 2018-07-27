@@ -2,7 +2,7 @@
 'use strict';
 
 
-//const {Payload, Image} = require('dialogflow-fulfillment');
+//const {Payload, Text} = require('dialogflow-fulfillment');
 const admin = require('firebase-admin');
 
 //Todo: get rich responses to work.
@@ -44,14 +44,16 @@ function buildRichPayload (data, requestedInfo){
        };
 
 }
-module.exports = (agent) => {
 
+
+module.exports = (agent) => {
        let conv = agent.conv();
        const params = agent.parameters;
        const products =  admin.database().ref('products');
        const product = params.megafoodProduct;
        const requestedInfo = params.productInfo;
        let data = {};
+
 
        const hasScreen = conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT'); // Determine surface screen capability.
 
@@ -63,7 +65,13 @@ module.exports = (agent) => {
                             conv.data.product = data;
                      }
                      if (agent.requestSource === 'ACTIONS_ON_GOOGLE') {
-                            conv.ask('Sure!...  '+ data[requestedInfo] + '...  Is there anything else I can do for you?');
+
+                            let ssml = '<speak>'+data['Product Name']+'\'s  '+ requestedInfo + ' is:'+ data[requestedInfo]+
+                                   '<break time="600ms"/> I can also help you reach your wellness goals; just tell me  what they are and I will point you to our supplements.' +
+                                   '<break time="300ms"/> or you can say goodbye to finish our conversation.</speak>';
+
+                            conv.ask(ssml);
+
                             /*if(hasScreen){
                                    let payload = buildRichPayload(data,requestedInfo);
                                    console.log(JSON.stringify(payload,null,3));
@@ -84,7 +92,7 @@ module.exports = (agent) => {
                      }
 
               }).catch(err=>{
-                     console.error(new Error(err));
+                     console.error(new Error(err + 'There was an error on the firebase database query.'));
                      return reject();
               });
        });
