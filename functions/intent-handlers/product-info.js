@@ -2,7 +2,7 @@
 'use strict';
 
 
-//const {Payload, Text} = require('dialogflow-fulfillment');
+const {Payload, Text} = require('dialogflow-fulfillment');
 const admin = require('firebase-admin');
 
 //Todo: get rich responses to work.
@@ -67,8 +67,8 @@ module.exports = (agent) => {
                      if (agent.requestSource === 'ACTIONS_ON_GOOGLE') {
 
                             let ssml = '<speak>'+data['Product Name']+'\'s  '+ requestedInfo + ' is:'+ data[requestedInfo]+
-                                   '<break time="600ms"/> I can also help you reach your wellness goals; just tell me  what they are and I will point you to our supplements.' +
-                                   '<break time="300ms"/> or you can say goodbye to finish our conversation.</speak>';
+                                   '<break time="1500ms"/> I can also help you reach your wellness goals; just tell me  what they are and I will point you to our supplements.' +
+                                   '<break time="700ms"/> or you can say goodbye to finish our conversation.</speak>';
 
                             conv.ask(ssml);
 

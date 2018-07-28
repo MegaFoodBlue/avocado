@@ -20,9 +20,9 @@ function buildSingleResponse (products, index, conv){
                      console.log('case 3 ---->'+length + index);
                      let product = products[index];
                      console.log(JSON.stringify(product));
-                     conv.ask(product.description + '. You can say next to hear more');
+                     conv.ask(product.description + '. You can say next to hear more...  Or say goodbye to close our conversation.');
                      resolve(conv);
-              } else if(index === length-1){
+              } else if(index === length){
                      console.log('case 4 ----> last product');
                      let product = products[index];
                      console.log(JSON.stringify(product));
