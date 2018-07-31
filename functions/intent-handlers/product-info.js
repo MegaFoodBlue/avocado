@@ -64,12 +64,20 @@ module.exports = (agent) => {
                             conv.data.product = data;
                      }
                      if (agent.requestSource === 'ACTIONS_ON_GOOGLE') {
-
-                            let ssml =    '<speak><p>'+data['Product Name']+'\'s  '+ requestedInfo + ' is:'+ data[requestedInfo]+'</p>'+
+                            console.log(requestedInfo + '<<<<----- Requested info');
+                            if(!requestedInfo){
+                                   console.log('prompting requested Info');
+                                   conv.ask('What would you like to know about ' + data['Product Name']+'? ');
+                            } else {
+                                   let ssml =    '<speak><p>'+data['Product Name']+'\'s  '+ requestedInfo + ' is:  '+ data[requestedInfo]+'</p>'+
                                           '<break time="1000ms"/> I can also help you reach your wellness goals; just tell me  what they are and I will point you to our supplements.' +
                                           '<break time="700ms"/> or you can say goodbye to finish our conversation.</speak>';
 
-                            conv.ask(ssml);
+                                   conv.ask(ssml);
+                            }
+
+
+
                             /*if(hasScreen){
                                    let payload = buildRichPayload(data,requestedInfo);
                                    console.log(JSON.stringify(payload,null,3));

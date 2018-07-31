@@ -16,13 +16,12 @@ module.exports = (agent) =>{
        console.log(hasScreen);
 
        conv.ask('<speak>\n' +
-              '  There’s a lot to love about Megafood\'s vitamins and supplements.\n' +
-              '   Easy-to-digest and formulated with farm fresh ingredients, they deliver optimal nutrition and support an overall sense of wellbeing.' +
-              '  In order for me to recommend the right one, please tell me what you want to achieve.<break time="300ms"/>\n' +
-              '  Want to loose weight?.\n' +
-              '  have more energy?.\n' +
-              '  or provide proper nourishment to you and your loved ones?\n<break time="700ms"/>' +
-              '   let me know and I can point you to our supplements.\n' +
+              '  There’s a lot to love about Megafood\'s vitamins and supplements.' +
+              '  Easy-to-digest and formulated with farm fresh ingredients, they deliver optimal nutrition and support an overall sense of wellbeing.'+
+              '  In order for me to help you find the right one, please tell me what you want to achieve.<break time="300ms"/>' +
+              '  Want to loose weight?' + '  Or have more energy?' +
+              '  Or provide proper nourishment to you and your loved ones?\n<break time="700ms"/>' +
+              '  Let me know what you want and I can point you to the right supplements.' +
               '</speak>');
        agent.add(conv); // Add Actions on Google library responses to your agent's response
 };

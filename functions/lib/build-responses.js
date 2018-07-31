@@ -58,11 +58,13 @@ exports.initial = (agent, category) => {
        if (agent.requestSource === 'ACTIONS_ON_GOOGLE') {
               if(hasScreen){
                      const googlePayload = {
-                            expectUserResponse: false,
+                            expectUserResponse: true,
                             isSsml : false,
                             noInputPrompts : [],
                             richResponse: data.richResponse,
                      };
+
+                     googlePayload.richResponse.items[0].simpleResponse.textToSpeech += '... I can also give you information about Megafood\'s products, just tell me what you want to know. Or say goodbye to finish our conversation.' ;
 
                      agent.add(new Payload('ACTIONS_ON_GOOGLE', googlePayload));
               } if (!hasScreen){
