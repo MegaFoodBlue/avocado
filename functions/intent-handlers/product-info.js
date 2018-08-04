@@ -77,6 +77,7 @@ module.exports = (agent) => {
                             }
 
 
+                            
 
                             /*if(hasScreen){
                                    let payload = buildRichPayload(data,requestedInfo);
