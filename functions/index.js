@@ -7,10 +7,62 @@
 const functions = require('firebase-functions');
 const {WebhookClient} = require('dialogflow-fulfillment');
 const admin = require('firebase-admin');
+const Alexa = require('alexa-sdk');
+const APP_ID = 'amzn1.ask.skill.2580776c-62c3-4997-8724-178807458af1';
+
 admin.initializeApp();
 
 
 process.env.DEBUG = 'dialogflow:debug'; // enables lib debugging statements
+
+exports.alexaFirebaseFulfillment = functions.https.onRequest((request, response)=>{
+       const body = request.body;
+       const req = body.request;
+       console.log(req);
+
+       let context = {
+              succeed: function (result) {
+                     console.log(result);
+                     response.json(result);
+              },
+              fail:function (error) {
+                     console.log(error);
+              }
+       };
+
+       const alexa = Alexa.handler(body, context);
+
+       const handlers = {
+              'LaunchRequest': function () {
+                     this.emit('LaunchIntent');
+              },
+
+              'LaunchIntent': function () {
+                     this.emit(':ask','Hi! I\'m not a substitute for a medical professional, but I know a lot about health and wellness. What are your health goals?');
+                     response.status(200).end();
+              },
+              'BeautySkin' : function (){
+
+              },
+              'Unhandled': function () {
+                     this.emit(':ask', 'HelloWorld2', 'HelloWorld2');
+                     response.status(200).end();
+              }
+       };
+
+       alexa.appId = APP_ID; // APP_ID is your skill id which can be found in the Amazon developer console where you create the skill.
+       alexa.registerHandlers(handlers);
+       alexa.execute();
+});
+
+
+
+
+/***
+ *  Creates endpoint for fullfilment for Google Assistant.
+ *
+ * @type {HttpsFunction}
+ */
 
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
 
