@@ -9,6 +9,7 @@ const {WebhookClient} = require('dialogflow-fulfillment');
 const admin = require('firebase-admin');
 const Alexa = require('alexa-sdk');
 const APP_ID = 'amzn1.ask.skill.2580776c-62c3-4997-8724-178807458af1';
+const build = require('./lib/build-responses');
 
 admin.initializeApp();
 
@@ -33,18 +34,21 @@ exports.alexaFirebaseFulfillment = functions.https.onRequest((request, response)
        const alexa = Alexa.handler(body, context);
 
        const handlers = {
-              'LaunchRequest': function () {
+              'LaunchRequest': () => {
                      this.emit('LaunchIntent');
               },
 
-              'LaunchIntent': function () {
+              'LaunchIntent':  () => {
                      this.emit(':ask','Hi! I\'m not a substitute for a medical professional, but I know a lot about health and wellness. What are your health goals?');
                      response.status(200).end();
               },
-              'BeautySkin' : function (){
-
+              'BeautySkin' : ()=> {
+                     build.initialAlexa('beautyAndSkinRich')
+                            .then(value => {
+                               this.emit(':ask', value);
+                            });
               },
-              'Unhandled': function () {
+              'Unhandled': () => {
                      this.emit(':ask', 'HelloWorld2', 'HelloWorld2');
                      response.status(200).end();
               }

@@ -115,3 +115,40 @@ exports.previous= (agent) => {
        console.log(conv.data.index);
        console.log(conv.data.products);
 };
+
+exports.randomPhrase = (myData) => {
+       let i = 0;
+       i = Math.floor(Math.random() * myData.length);
+       return(myData[i]);
+};
+
+exports.initialAlexa = (goal)=>{
+       return new Promise((resolve, reject)=>{
+              let params = {};
+              let data = rich.getResponses(goal, params);
+              let simpleResponse = data.richResponse.items[0].simpleResponse.textToSpeech;
+              let products = data.richResponse.items[1].carouselBrowse.items;
+              let length = products.length;
+              let index = 0;
+              console.log('build single response is running with length of products ----->' + length + 'and index--->' + index);
+              if(index === 0){
+                     let product = products[index];
+                     console.log('case 2' + JSON.stringify(product));
+                     resolve(simpleResponse + '. ' + product.description + '. You can say next to hear more.  Or say exit to close our conversation.' );
+              } else if(index < length){
+                     console.log('case 3 ---->'+length + index);
+                     let product = products[index];
+                     console.log(JSON.stringify(product));
+                     resolve(product.description + '. You can say next to hear more...  Or say exit to close our conversation.');
+              } else if(index === length){
+                     console.log('case 4 ----> last product');
+                     let product = products[index];
+                     console.log(JSON.stringify(product));
+                     resolve('This was the last product on this category. You can say previous to go back');
+              }
+              else {
+                     console.log('case 5');
+                     //resolve(conv);
+              }
+       });
+};
