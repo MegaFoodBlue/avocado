@@ -21,6 +21,7 @@ exports.alexaFirebaseFulfillment = functions.https.onRequest((request, response)
        const req = body.request;
        console.log(req);
 
+
        let context = {
               succeed: function (result) {
                      console.log(result);
@@ -39,11 +40,11 @@ exports.alexaFirebaseFulfillment = functions.https.onRequest((request, response)
               },
 
               'LaunchIntent':  () => {
-                     this.emit(':ask','Hi! I\'m not a substitute for a medical professional, but I know a lot about health and wellness. What are your health goals?');
+                     this.emit(':ask','Hi! I\'m not a substitute for a medical professional, but I know a lot about health and wellness.' + build.randomWelcome());
                      response.status(200).end();
               },
               'BeautySkin' : ()=> {
-                     build.initialAlexa('beautyAndSkinRich')
+                     build.goalsAlexa('beautyAndSkinRich')
                             .then(value => {
                                this.emit(':ask', value);
                             });
@@ -54,9 +55,90 @@ exports.alexaFirebaseFulfillment = functions.https.onRequest((request, response)
               }
        };
 
-       alexa.appId = APP_ID; // APP_ID is your skill id which can be found in the Amazon developer console where you create the skill.
        alexa.registerHandlers(handlers);
+
+       alexa.appId = APP_ID; // APP_ID is your skill id which can be found in the Amazon developer console where you create the skill.
        alexa.execute();
+
+       /*const requestLog = {
+         process(handlerInput){
+                console.log("REQUEST ENVELOPE = "+ JSON.stringify(handlerInput.requestEnvelope));
+                return;
+         }
+       };
+
+       const EmptyHandler = {
+              canHandle(handlerInput) {
+                     return false;
+              },
+              handle(handlerInput, error) {
+                     return handlerInput.responseBuilder
+                            .speak()
+                            .reprompt()
+                            .getResponse();
+              }
+       };
+
+       const LaunchRequestHandler = {
+              canHandle(handlerInput){
+                     return handlerInput.requestEnvelope.request.type === "LaunchRequest";
+              },
+              handle(handlerInput, error){
+                     console.log("IN LAUNCH REQUEST");
+                     return handlerInput.responseBuilder
+                            .speak("Hi! I\\'m not a substitute for a medical professional, but I know a lot about health and wellness." + build.randomWelcome())
+                            .reprompt(build.randomWelcome())
+                            .getResponse();
+              },
+       };
+
+       const ErrorHandler = {
+              canHandle(){
+                     return true;
+              },
+              handle(handlerInput, error){
+                     console.log("Error Handled: "+ JSON.stringify(error.message));
+                     console.log("handlerInput: "+ JSON.stringify(handlerInput));
+                     return handlerInput.responseBuilder
+                            .speak("Sorry, I can\'t understand the command. Please try again")
+                            .getResponse();
+              },
+       };
+
+       const BeautySkinHandler = {
+              canHandle(handlerInput){
+                     return handlerInput.requestEnvelope.request.type === "IntentRequest" &&
+                            handlerInput.requestEnvelope.request.intent.name === "BeautySkin";
+              },
+              handle(handlerInput, error) {
+                     console.log('IN BEAUTY SKIN HANDLER');
+                     build.goalsAlexa('beautyAndSkinRich')
+                            .then(value => {
+                                   console.log(value);
+                                   console.log(typeof value);
+                                   return handlerInput.responseBuilder
+                                          .speak(value);
+                            });
+              }
+              };
+
+       const alexa = Alexa.SkillBuilders.custom()
+              .addRequestHandler(
+                     LaunchRequestHandler,
+                     BeautySkinHandler
+              )
+              .addRequestInterceptors(requestLog)
+              .addErrorHandler(ErrorHandler);
+
+              alexa.invoke(body)
+                     .then(function(responseBody) {
+                            response.json(responseBody);
+                            response.status(200).end();
+                     })
+                     .catch(function(error) {
+                            console.log(error);
+                            response.status(500).send('Error during the request');
+                     });*/
 });
 
 

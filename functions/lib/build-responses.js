@@ -116,13 +116,7 @@ exports.previous= (agent) => {
        console.log(conv.data.products);
 };
 
-exports.randomPhrase = (myData) => {
-       let i = 0;
-       i = Math.floor(Math.random() * myData.length);
-       return(myData[i]);
-};
-
-exports.initialAlexa = (goal)=>{
+exports.goalsAlexa = (goal)=>{
        return new Promise((resolve, reject)=>{
               let params = {};
               let data = rich.getResponses(goal, params);
@@ -152,3 +146,50 @@ exports.initialAlexa = (goal)=>{
               }
        });
 };
+
+exports.randomWelcome = ()=>{
+       let questions = ['Hi! I\'m not a substitute for a medical professional, but I know a lot about health and wellness. What are your health goals?', 'Help me, help you by telling me your age and gender?', 'How can I help you?', 'What are your wanting to upgrade with your health?', 'You can ask me for information on all of Megafood\'s products'];
+       let random = getRandom(0, questions.length-1);
+       return "<break time='.5s'/>" + questions[random];
+
+};
+
+exports.getSpokenValue = (envelope, slotName) =>
+       {
+              if (envelope &&
+                     envelope.request &&
+                     envelope.request.intent &&
+                     envelope.request.intent.slots &&
+                     envelope.request.intent.slots[slotName] &&
+                     envelope.request.intent.slots[slotName].value)
+              {
+                     return envelope.request.intent.slots[slotName].value;
+              }
+              else {
+                     return undefined;
+              }
+       };
+
+exports.getResolvedValues = (envelope, slotName) =>
+       {
+              if (envelope &&
+                     envelope.request &&
+                     envelope.request.intent &&
+                     envelope.request.intent.slots &&
+                     envelope.request.intent.slots[slotName] &&
+                     envelope.request.intent.slots[slotName].resolutions &&
+                     envelope.request.intent.slots[slotName].resolutions.resolutionsPerAuthority &&
+                     envelope.request.intent.slots[slotName].resolutions.resolutionsPerAuthority[0] &&
+                     envelope.request.intent.slots[slotName].resolutions.resolutionsPerAuthority[0].values)
+              {
+                     return envelope.request.intent.slots[slotName].resolutions.resolutionsPerAuthority[0].values;
+              }
+              else {
+                     return undefined;
+              }
+       };
+
+function getRandom(min, max) {
+       return Math.floor(Math.random() * (max-min+1)+min);
+}
+

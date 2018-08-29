@@ -2,10 +2,14 @@
 /* jshint node: true */
 
 'use strict';
+
+const https = require('https');
+const Airtable = require('airtable');
+const secret = require('../lib/secret');
+
 const footer = 'This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.';
 
 const boneHealthRich = {
-
               "richResponse": {
                      "items": [
                             {
@@ -116,7 +120,7 @@ const sleepStressRich = {
                                                         },
                                                         "openUrlAction": {
                                                                "url": "https://www.megafood.com/vitamins-health-needs-goals/sleep-supplements/dream-release-W1020.html?cgid=sleep-supplements"
-                                                        }
+                                                 }
                                                  },
                                                  {
                                                         "title": "Thyroid Strength ",
@@ -713,7 +717,6 @@ const prenatalPostnatalRich ={
               }
 };
 
-
 const sportRich = {
               "richResponse": {
                      "items": [
@@ -1178,6 +1181,7 @@ exports.getResponses = (intent, params)=>{
 
        if (intent === 'energyRich'){
               payload = energyRich;
+              airtableGetGoals('Energy');
        }
        if(intent === 'beautyAndSkinRich'){
               payload = beautyAndSkinRich;
@@ -1226,4 +1230,104 @@ exports.getResponses = (intent, params)=>{
 
 function filterParameter (payload, param, value) {
         return payload.filter(item => item.parameters[param] === value || item.parameters[param] === undefined);
+}
+
+function airtableGetProductInfo (base, table, filter, callback) {
+       console.log("IN AIRTABLE GET");
+       console.log("BASE = " + base);
+       console.log("TABLE = " + table);
+       console.log("FILTER = " + filter);
+
+       let options = {
+              host: "api.airtable.com",
+              port: 443,
+              path: "/v0/" + base + "/" + table + "?api_key="+secret.AIRTABLE_API_KEY + filter,
+              method: 'GET',
+       };
+
+       console.log("PATH = https://" + options.host + options.path);
+
+       let req = https.request(options, res => {
+              res.setEncoding('utf8');
+              let returnData = "";
+
+              res.on('data', chunk => {
+                     returnData = returnData + chunk;
+              });
+
+              res.on('end', () => {
+                     let data = JSON.parse(returnData);
+                     console.log("DATA = " + JSON.stringify(data));
+                     callback(data);
+              });
+       });
+       req.end();
+}
+
+function airtableGetGoals (goal){
+       return new Promise((resolve,reject)=>{
+              const base = new Airtable({apiKey: 'keyo49Tl2tr4aROPa'}).base('apparAnxxgPKNtgws');
+              let items = [];
+              let payload = {
+                     "richResponse" :{
+                            "items" : [
+                                   {
+                                          "simpleResponse": {
+                                          }
+                                   },
+                                   {
+                                          "carouselBrowse" : {
+                                          }
+                                   }
+                            ]
+                     }
+              };
+
+              base(goal).select({
+                     maxRecords: 15,
+                     view: "Grid view"
+              }).eachPage(function page(records) {
+                     console.log(JSON.stringify(records));
+                     records.forEach(function(record) {
+                            if(record.get('title')=== 'General' ){
+                                   payload.richResponse.items[0].simpleResponse.textToSpeech = record.get('description');
+                            } else {
+                                   const title = record.get('title');
+                                   const image = record.get('image');
+                                   const openUrlAction = record.get('openUrlAction');
+                                   console.log(title+image+openUrlAction);
+                                   let description = '';
+                                   if (record.get('spoken description')){
+                                          description = record.get('spoken description');
+                                          console.log('There is a spoken description, and it is: ' + description );
+                                   } else {
+                                          description = record.get('description');
+                                          console.log('There is no spoken description, and it is: ' + description);
+                                   }
+                                   let item = {
+                                          "title" : record.get('title'),
+                                          "description": description,
+                                          "footer": footer,
+                                          "image" : {
+                                                 "url" : record.get('image'),
+                                                 "accessibilityText" : record.get('title')
+                                          },
+                                          "openUrlAction" : {
+                                                 "url" : record.get('openUrlAction')
+                                          }
+                                   };
+                                   items.push(item);
+                            }
+
+                     });
+                     payload.carouselBrowse.items = items;
+                     console.log(JSON.stringify(payload));
+                     resolve(payload);
+
+              }, function done(err) {
+                     if (err) {console.error(err);}
+                     reject(err);
+              });
+       });
+
 }

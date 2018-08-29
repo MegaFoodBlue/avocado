@@ -8,3 +8,4 @@ dist
 *.swo
 *.log
 *.DS_Store
+/functions/lib/secret.js
