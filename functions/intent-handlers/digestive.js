@@ -8,5 +8,11 @@ module.exports = (agent) => {
        let conv = agent.conv();
        conv.data.products = undefined;
        conv.data.index = undefined;
-       build.initial(agent, 'digestiveRich');
+
+       return new Promise((resolve, reject)=>{
+              build.initialAir(agent, 'Digestive')
+                     .then(res=>{
+                            resolve(res);
+                     });
+       });
 };

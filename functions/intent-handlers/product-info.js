@@ -60,8 +60,8 @@ module.exports = (agent) => {
 
               products.child(product).once('value').then(snap => {
                      data = snap.val();
-                     if(conv.data.product === undefined){
-                            conv.data.product = data;
+                     if(conv.user.storage.product === undefined){
+                            conv.user.storage.product = data;
                      }
                      if (agent.requestSource === 'ACTIONS_ON_GOOGLE') {
                             console.log(requestedInfo + '<<<<----- Requested info');

@@ -8,5 +8,11 @@ module.exports = (agent) => {
        let conv = agent.conv();
        conv.data.products = undefined;
        conv.data.index = undefined;
-       build.initial(agent, 'sleepStressRich');
+
+       return new Promise((resolve, reject)=>{
+              build.initialAir(agent, 'SleepStress')
+                     .then(res=>{
+                            resolve(res);
+                     });
+       });
 };

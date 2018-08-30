@@ -3,10 +3,15 @@
 
 const build = require('../lib/build-responses');
 
-
 module.exports = (agent) => {
        let conv = agent.conv();
        conv.data.products = undefined;
        conv.data.index = undefined;
-       build.initial(agent, 'immuneRich');
+
+       return new Promise((resolve, reject)=>{
+              build.initialAir(agent, 'Immune')
+                     .then(res=>{
+                            resolve(res);
+                     });
+       });
 };

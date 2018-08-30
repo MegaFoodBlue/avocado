@@ -7,9 +7,6 @@
 const functions = require('firebase-functions');
 const {WebhookClient} = require('dialogflow-fulfillment');
 const admin = require('firebase-admin');
-const Alexa = require('alexa-sdk');
-const APP_ID = 'amzn1.ask.skill.2580776c-62c3-4997-8724-178807458af1';
-const build = require('./lib/build-responses');
 
 admin.initializeApp();
 
@@ -42,46 +39,46 @@ exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, resp
        let intentMap = new Map();
 
        intentMap.set('beauty-skin', require('./intent-handlers/beauty-skin'));
-       intentMap.set('beauty-skin-next', require('./intent-handlers/beauty-skin-next'));
-       intentMap.set('beauty-skin-previous', require('./intent-handlers/beauty-skin-previous'));
+       intentMap.set('beauty-skin-next', require('./intent-handlers/next'));
+       intentMap.set('beauty-skin-previous', require('./intent-handlers/previous'));
 
        intentMap.set('bone-health', require('./intent-handlers/bone-health'));
-       intentMap.set('bone-health-next', require('./intent-handlers/bone-health-next'));
-       intentMap.set('bone-health-previous', require('./intent-handlers/bone-health-previous'));
+       intentMap.set('bone-health-next', require('./intent-handlers/next'));
+       intentMap.set('bone-health-previous', require('./intent-handlers/previous'));
 
        intentMap.set('digestive', require('./intent-handlers/digestive'));
-       intentMap.set('digestive-next', require('./intent-handlers/digestive-next'));
-       intentMap.set('digestive-previous', require('./intent-handlers/digestive-previous'));
+       intentMap.set('digestive-next', require('./intent-handlers/next'));
+       intentMap.set('digestive-previous', require('./intent-handlers/previous'));
 
        intentMap.set('healthy-aging', require('./intent-handlers/healthy-aging'));
-       intentMap.set('healthy-aging-next', require('./intent-handlers/healthy-aging-next'));
-       intentMap.set('healthy-aging-previous', require('./intent-handlers/healthy-aging-previous'));
+       intentMap.set('healthy-aging-next', require('./intent-handlers/next'));
+       intentMap.set('healthy-aging-previous', require('./intent-handlers/previous'));
 
        intentMap.set('immune', require('./intent-handlers/immune'));
-       intentMap.set('immune-next', require('./intent-handlers/immune-next'));
-       intentMap.set('immune-previous', require('./intent-handlers/immune-previous'));
+       intentMap.set('immune-next', require('./intent-handlers/next'));
+       intentMap.set('immune-previous', require('./intent-handlers/previous'));
 
        intentMap.set('energy', require('./intent-handlers/energy'));
-       intentMap.set('energy-next', require('./intent-handlers/energy-next'));
-       intentMap.set('energy-previous', require('./intent-handlers/energy-previous'));
+       intentMap.set('energy-next', require('./intent-handlers/next'));
+       intentMap.set('energy-previous', require('./intent-handlers/previous'));
 
        intentMap.set('kids-health', require('./intent-handlers/kids-health'));
-       intentMap.set('kids-health-next', require('./intent-handlers/kids-health-next'));
-       intentMap.set('kids-health-previous', require('./intent-handlers/kids-health-previous'));
+       intentMap.set('kids-health-next', require('./intent-handlers/next'));
+       intentMap.set('kids-health-previous', require('./intent-handlers/previous'));
 
        intentMap.set('prenatal-postnatal', require('./intent-handlers/prenatal-postnatal'));
-       intentMap.set('prenatal-postnatal-next', require('./intent-handlers/prenatal-postnatal-next'));
-       intentMap.set('prenatal-postnatal-previous', require('./intent-handlers/prenatal-postnatal-previous'));
+       intentMap.set('prenatal-postnatal-next', require('./intent-handlers/next'));
+       intentMap.set('prenatal-postnatal-previous', require('./intent-handlers/previous'));
 
        intentMap.set('product-info', require('./intent-handlers/product-info'));
 
        intentMap.set('sleep-stress', require('./intent-handlers/sleep-stress'));
-       intentMap.set('sleep-stress-next', require('./intent-handlers/sleep-stress-next'));
-       intentMap.set('sleep-stress-previous', require('./intent-handlers/sleep-stress-previous'));
+       intentMap.set('sleep-stress-next', require('./intent-handlers/next'));
+       intentMap.set('sleep-stress-previous', require('./intent-handlers/previous'));
 
        intentMap.set('sport', require('./intent-handlers/sport'));
-       intentMap.set('sport-next', require('./intent-handlers/sport-next'));
-       intentMap.set('sport-previous', require('./intent-handlers/sport-previous'));
+       intentMap.set('sport-next', require('./intent-handlers/next'));
+       intentMap.set('sport-previous', require('./intent-handlers/previous'));
 
        intentMap.set('default-supplements', require('./intent-handlers/default-supplements'));
 

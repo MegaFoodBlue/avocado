@@ -6,23 +6,7 @@ const rich = require('../lib/rich-responses');
 const Airtable = require('airtable');
 const secret = require('../lib/secret');
 const footer = 'This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.';
-const base = new Airtable({apiKey: 'keyo49Tl2tr4aROPa'}).base('apparAnxxgPKNtgws');
-let items = [];
-let payload = {
-       "richResponse" :{
-              "items" : [
-                     {
-                            "simpleResponse": {
-                            }
-                     },
-                     {
-                            "carouselBrowse" : {
-                                   "items" : [{}]
-                            }
-                     }
-              ]
-       }
-};
+
 
 
 
@@ -35,13 +19,14 @@ exports.initial = (agent, category) => {
        let conv = agent.conv(); // Get Actions on Google library conv instance
 
 
-       if(conv.data.products === undefined){
-              conv.data.products = products.items;
+       if(conv.user.storage.products === undefined){
+              conv.user.storage.products = products.items;
               console.log('products are undefined, setting products to conv data');
        }
 
-       if(conv.data.index === undefined){
-              conv.data.index = 0;
+       if(conv.user.storage.index === undefined){
+              console.log('index is undefined, setting indext to 0 in conv data');
+              conv.user.storage.index = 0;
        }
 
        const hasScreen = conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT'); // Determine surface screen capability.
@@ -61,9 +46,9 @@ exports.initial = (agent, category) => {
               } if (!hasScreen){
                      console.log('user does not have a screen');
                      conv.ask(simpleResponse);
-                     buildSingleResponse(conv.data.products, conv.data.index, conv)
+                     buildSingleResponse(conv.user.storage.products, conv.user.storage.index, conv)
                             .then(function(conversation){
-                                   conv.data.index ++;
+                                   conv.user.storage.index ++;
                                    agent.add(conversation); // Add Actions on Google library responses to your agent's response
                             });
 
@@ -77,7 +62,6 @@ exports.initial = (agent, category) => {
 
 exports.initialAir = (agent, category) => {
        return new Promise((resolve => {
-              let params = agent.parameters;
               let data = {};
               let conv = agent.conv(); // Get Actions on Google library conv instance
               airtableGetGoals(category)
@@ -88,18 +72,17 @@ exports.initialAir = (agent, category) => {
                             let simpleResponse = data.richResponse.items[0].simpleResponse.textToSpeech;
                             let products = data.richResponse.items[1].carouselBrowse;
 
-                            if(conv.data.products === undefined){
-                                   conv.data.products = products.items;
-                                   console.log('products are undefined, setting products to conv data');
-                            }
-                            if(conv.data.index === undefined){
-                                   conv.data.index = 0;
-                            }
+                            conv.data.products = products.items;
+                            conv.data.index = 0;
+
+                            console.log(JSON.stringify("products from Wellness Goal: "+conv.data.products,null,'\t'));
+
 
                             const hasScreen = conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT'); // Determine surface screen capability.
 
                             if (agent.requestSource === 'ACTIONS_ON_GOOGLE') {
                                    if(hasScreen){
+                                          console.log('user has a screen');
                                           const googlePayload = {
                                                  expectUserResponse: true,
                                                  isSsml : false,
@@ -116,7 +99,6 @@ exports.initialAir = (agent, category) => {
                                           conv.ask(simpleResponse);
                                           buildSingleResponse(conv.data.products, conv.data.index, conv)
                                                  .then(function(conversation){
-                                                        conv.data.index ++;
                                                         agent.add(conversation); // Add Actions on Google library responses to your agent's response
                                                         resolve();
                                                  });
@@ -178,10 +160,27 @@ function getRandom(min, max) {
 }
 
 function airtableGetGoals (goal){
+       const base = new Airtable({apiKey: 'keyo49Tl2tr4aROPa'}).base('apparAnxxgPKNtgws');
+       let items = [];
+       let payload = {
+              "richResponse" :{
+                     "items" : [
+                            {
+                                   "simpleResponse": {
+                                   }
+                            },
+                            {
+                                   "carouselBrowse" : {
+                                          "items" : [{}]
+                                   }
+                            }
+                     ]
+              }
+       };
        return new Promise((resolve,reject)=>{
 
               base(goal).select({
-                     maxRecords: 15,
+                     maxRecords: 10,
                      view: "Grid view"
               }).eachPage(function page(records) {
                      records.forEach(function(record) {
@@ -211,7 +210,7 @@ function airtableGetGoals (goal){
                      });
                      payload.richResponse.items[1].carouselBrowse.items = items;
                      resolve(payload);
-
+                     console.log("This is the payload processed by airtableGetGoals ----->"+JSON.stringify(payload, null, 2));
               }, function done(err) {
                      if (err) {console.error(err);}
                      reject(err);
