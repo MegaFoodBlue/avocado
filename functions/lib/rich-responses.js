@@ -1180,8 +1180,11 @@ exports.getResponses = (intent, params)=>{
        let payload = {};
 
        if (intent === 'energyRich'){
-              payload = energyRich;
-              airtableGetGoals('Energy');
+              //payload = energyRich;
+              airtableGetGoals('Energy')
+                     .then(function (res) {
+                        payload = res;
+                     });
        }
        if(intent === 'beautyAndSkinRich'){
               payload = beautyAndSkinRich;

@@ -9,10 +9,9 @@ module.exports = (agent) => {
        conv.data.products = undefined;
        conv.data.index = undefined;
        return new Promise((resolve, reject)=>{
-              rich.testAirtable('Energy')
-                     .then(value => {
-                            build.initial(agent, 'energyRich');
-                            resolve();
+              build.initialAir(agent, 'Energy')
+                     .then(res=>{
+                        resolve(res);
                      });
        });
 };
