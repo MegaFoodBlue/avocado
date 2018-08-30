@@ -49,6 +49,7 @@ exports.initial = (agent, category) => {
               conv.data.products = products.items;
               console.log('products are undefined, setting products to conv data');
        }
+
        if(conv.data.index === undefined){
               conv.data.index = 0;
        }

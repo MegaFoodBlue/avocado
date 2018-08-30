@@ -1264,7 +1264,7 @@ function airtableGetProductInfo (base, table, filter, callback) {
        req.end();
 }
 
-function airtableGetGoals (goal){
+exports.testAirtable = (goal)=>{
        return new Promise((resolve,reject)=>{
               const base = new Airtable({apiKey: 'keyo49Tl2tr4aROPa'}).base('apparAnxxgPKNtgws');
               let items = [];
@@ -1277,6 +1277,7 @@ function airtableGetGoals (goal){
                                    },
                                    {
                                           "carouselBrowse" : {
+                                                 "items" : [{}]
                                           }
                                    }
                             ]
@@ -1287,7 +1288,7 @@ function airtableGetGoals (goal){
                      maxRecords: 15,
                      view: "Grid view"
               }).eachPage(function page(records) {
-                     console.log(JSON.stringify(records));
+                     console.log(JSON.stringify(records.fields, null, '\t'));
                      records.forEach(function(record) {
                             if(record.get('title')=== 'General' ){
                                    payload.richResponse.items[0].simpleResponse.textToSpeech = record.get('description');
@@ -1316,12 +1317,13 @@ function airtableGetGoals (goal){
                                                  "url" : record.get('openUrlAction')
                                           }
                                    };
+                                   console.log(JSON.stringify(item, null, '\t'));
                                    items.push(item);
                             }
 
                      });
-                     payload.carouselBrowse.items = items;
-                     console.log(JSON.stringify(payload));
+                     console.log(JSON.stringify(items, null, '\t'));
+                     payload.richResponse.items[1].carouselBrowse.items = items;
                      resolve(payload);
 
               }, function done(err) {
@@ -1329,5 +1331,73 @@ function airtableGetGoals (goal){
                      reject(err);
               });
        });
+};
 
+function airtableGetGoals (goal){
+       return new Promise((resolve,reject)=>{
+              const base = new Airtable({apiKey: 'keyo49Tl2tr4aROPa'}).base('apparAnxxgPKNtgws');
+              let items = [];
+              let payload = {
+                     "richResponse" :{
+                            "items" : [
+                                   {
+                                          "simpleResponse": {
+                                          }
+                                   },
+                                   {
+                                          "carouselBrowse" : {
+                                                 "items" : [{}]
+                                          }
+                                   }
+                            ]
+                     }
+              };
+
+              base(goal).select({
+                     maxRecords: 15,
+                     view: "Grid view"
+              }).eachPage(function page(records) {
+                     console.log(JSON.stringify(records.fields, null, '\t'));
+                     records.forEach(function(record) {
+                            if(record.get('title')=== 'General' ){
+                                   payload.richResponse.items[0].simpleResponse.textToSpeech = record.get('description');
+                            } else {
+                                   const title = record.get('title');
+                                   const image = record.get('image');
+                                   const openUrlAction = record.get('openUrlAction');
+                                   console.log(title+image+openUrlAction);
+                                   let description = '';
+                                   if (record.get('spoken description')){
+                                          description = record.get('spoken description');
+                                          console.log('There is a spoken description, and it is: ' + description );
+                                   } else {
+                                          description = record.get('description');
+                                          console.log('There is no spoken description, and it is: ' + description);
+                                   }
+                                   let item = {
+                                          "title" : record.get('title'),
+                                          "description": description,
+                                          "footer": footer,
+                                          "image" : {
+                                                 "url" : record.get('image'),
+                                                 "accessibilityText" : record.get('title')
+                                          },
+                                          "openUrlAction" : {
+                                                 "url" : record.get('openUrlAction')
+                                          }
+                                   };
+                                   console.log(JSON.stringify(item, null, '\t'));
+                                   items.push(item);
+                            }
+
+                     });
+                     console.log(JSON.stringify(items, null, '\t'));
+                     payload.richResponse.items[1].carouselBrowse.items = items;
+                     resolve(payload);
+
+              }, function done(err) {
+                     if (err) {console.error(err);}
+                     reject(err);
+              });
+       });
 }
