@@ -3,6 +3,7 @@
 
 
 const admin = require('firebase-admin');
+const build = require('../lib/build-responses');
 
 //Todo: get rich responses to work.
 function buildRichPayload (data, requestedInfo){
@@ -51,16 +52,24 @@ module.exports = (agent) => {
        const products =  admin.database().ref('products');
        const product = params.megafoodProduct;
        const requestedInfo = params.productInfo;
-       let data = {};
+       const spokenProduct = params.megafoodProduct.original;
 
+       let data = {};
+       console.log('fetching info in Product Index: '+ product + ", to retrieve it's "+requestedInfo);
+
+       const filter = "&filterByFormula=%7BProduct%20Index%7D%3D%22" + product + "%22";
 
        const hasScreen = conv.surface.capabilities.has('actions.capability.SCREEN_OUTPUT'); // Determine surface screen capability.
 
        return new Promise((resolve, reject)=>{
 
-              products.child(product).once('value').then(snap => {
-                     data = snap.val();
+              //products.child(product).once('value').then(snap => {
+              build.airtableGetProductInfo('apparAnxxgPKNtgws','Master%20Products', filter).then(snap => {
+                     //data = snap.val();
+                     data = snap.records[0].fields;
+                     console.log(JSON.stringify(data,null,2));
                      if(conv.user.storage.product === undefined){
+                            conv.user.storage.product = data;
                             conv.user.storage.product = data;
                      }
                      if (agent.requestSource === 'ACTIONS_ON_GOOGLE') {
@@ -69,15 +78,13 @@ module.exports = (agent) => {
                                    console.log('prompting requested Info');
                                    conv.ask('What would you like to know about ' + data['Product Name']+'? ');
                             } else {
-                                   let ssml =    '<speak><p>'+data['Product Name']+'\'s  '+ requestedInfo + ' is:  '+ data[requestedInfo]+'</p>'+
+                                   let ssml =    '<speak><p>'+data['Product Name']+'\'s  '+ requestedInfo + ' is: <break time="500ms"/> '+ data[requestedInfo]+'</p>'+
                                           '<break time="1000ms"/> I can also help you reach your wellness goals; just tell me  what they are and I will point you to our supplements.' +
                                           '<break time="700ms"/> or you can say goodbye to finish our conversation.</speak>';
 
                                    conv.ask(ssml);
                             }
 
-
-                            
 
                             /*if(hasScreen){
                                    let payload = buildRichPayload(data,requestedInfo);
@@ -99,7 +106,7 @@ module.exports = (agent) => {
                      }
 
               }).catch(err=>{
-                     console.error(new Error(err + 'There was an error on the firebase database query.'));
+                     console.error(new Error(err + 'There was an error on the airtable database query.'));
                      return reject();
               });
        });

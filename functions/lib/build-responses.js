@@ -4,7 +4,10 @@
 const {Payload} = require('dialogflow-fulfillment');
 const rich = require('../lib/rich-responses');
 const Airtable = require('airtable');
+const https = require('https');
 const secret = require('../lib/secret');
+
+
 const footer = 'This statement has not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.';
 
 
@@ -114,6 +117,40 @@ exports.initialAir = (agent, category) => {
                             conv.ask("I could not find products related to this category, please try again.");
                      });
        }));
+};
+
+exports.airtableGetProductInfo =(base, table, filter) => {
+       return new Promise((resolve, reject)=>{
+              console.log("IN AIRTABLE GET");
+              console.log("BASE = " + base);
+              console.log("TABLE = " + table);
+              console.log("FILTER = " + filter);
+
+              let options = {
+                     host: "api.airtable.com",
+                     port: 443,
+                     path: "/v0/" + base + "/" + table + "?api_key="+secret.AIRTABLE_API_KEY + filter,
+                     method: 'GET',
+              };
+
+              console.log("PATH = https://" + options.host + options.path);
+
+              let req = https.request(options, res => {
+                     res.setEncoding('utf8');
+                     let returnData = "";
+
+                     res.on('data', chunk => {
+                            returnData = returnData + chunk;
+                     });
+
+                     res.on('end', () => {
+                            let data = JSON.parse(returnData);
+                            console.log("DATA = " + JSON.stringify(data));
+                            resolve(data);
+                     });
+              });
+              req.end();
+       });
 };
 
 exports.next= (agent) => {
