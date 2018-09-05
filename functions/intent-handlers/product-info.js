@@ -2,7 +2,7 @@
 'use strict';
 
 
-const admin = require('firebase-admin');
+
 const build = require('../lib/build-responses');
 
 //Todo: get rich responses to work.
@@ -49,10 +49,8 @@ function buildRichPayload (data, requestedInfo){
 module.exports = (agent) => {
        let conv = agent.conv();
        const params = agent.parameters;
-       const products =  admin.database().ref('products');
        const product = params.megafoodProduct;
        const requestedInfo = params.productInfo;
-       const spokenProduct = params.megafoodProduct.original;
 
        let data = {};
        console.log('fetching info in Product Index: '+ product + ", to retrieve it's "+requestedInfo);
@@ -63,9 +61,7 @@ module.exports = (agent) => {
 
        return new Promise((resolve, reject)=>{
 
-              //products.child(product).once('value').then(snap => {
               build.airtableGetProductInfo('apparAnxxgPKNtgws','Master%20Products', filter).then(snap => {
-                     //data = snap.val();
                      data = snap.records[0].fields;
                      console.log(JSON.stringify(data,null,2));
                      if(conv.user.storage.product === undefined){

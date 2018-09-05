@@ -215,7 +215,6 @@ function airtableGetGoals (goal){
               }
        };
        return new Promise((resolve,reject)=>{
-
               base(goal).select({
                      maxRecords: 10,
                      view: "Grid view"
